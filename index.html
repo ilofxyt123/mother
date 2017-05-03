@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var ua = navigator.userAgent;
+        var phoneWidth = parseInt(window.screen.width), phoneScale = phoneWidth / 640;
+        if (/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            var qqv = ua.match(/MQQBrowser\/(\d+)/) ? ua.match(/MQQBrowser\/(\d+)/)[1] : 0;
+            if (version > 2.3 && qqv < 6) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ", maximum-scale = " + phoneScale + ', target-densitydpi=device-dpi,user-scalable=no">')
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi,user-scalable=no">')
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">')
+        }
+    </script>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <script>
+        var css;
+        css = '<'+'link '+'href='+"css/common.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css);
+        css = '<'+'link '+'href='+"css/animate.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css);
+        css = '<'+'link '+'href='+"css/index.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css);
+    </script>
+    <title>EP雅莹母亲节</title>
+</head>
+<body>
+<div class="top">
+    <img src="images/logo.png" class="logo">
+    <img src="images/music_btn.png" class="music-btn none">
+    <img src="images/rule_btn.png" class="rule-btn none">
+</div>
+
+
+<div class="container P_bg">
+    <img src="images/bg2.jpg" class="bg-pic">
+</div>
+
+
+<div class="container P_loading none">
+    <div class="load-area">
+        <img src="images/load-pic.png" class="load-pic">
+        <span class="num color1">-0%-</span>
+    </div>
+</div>
+
+<div class="container P1">
+
+</div>
+
+
+
+
+<div class="container P_share none">
+
+</div>
+
+<div class="hp">
+    <div class="hp_box">
+        <img src="images/phone.png" class="phone">
+        <img src="images/weile.png" class="hp_tip">
+    </div>
+</div>
+<audio id="bgm" src="music/music.mp3" preload="auto" loop="true" class="iosPreload"></audio>
+<script src="js/jquery-1.11.3.min.js"></script>
+<input type="hidden" id="is_end" value="1" /><!--活动是否结束-->
+<input type="hidden" id="prizeType" value="1" /><!--奖品类型:0,1,2-->
+<input type="hidden" id="have_guanzhu" value="1" /><!--是否关注-->
+<input type="hidden" id="is_vip" value="1" /><!--是否是vip-->
+<input type="hidden" id="havePay" value="1" /><!--是否付过钱-->
+<input type="hidden" id="FromTuiSong" value="0" /><!--是否从推送进页面-->
+<input type="hidden" id="isOpen4999" value="1" /><!--4999大奖是否已知-->
+<input type="hidden" id="haveFill" value="0" /><!--4999大奖已经填写过信息-->
+<input type="hidden" id="goRegist" value="0" /><!--刚才去注册了一下-->
+
+<input type="hidden" id="openid" value="" />
+<input type="hidden" id="lottery_result" value="" />
+<input type="hidden" id="appId" value="" />
+<input type="hidden" id="timestamp" value="" />
+<input type="hidden" id="nonceStr" value="" />
+<input type="hidden" id="signature" value="" />
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<!--<script>-->
+    <!--var js;-->
+    <!--js = '<' + 'script ' + 'src=' + "js/index.js?v" + Math.random() + '>' + '</' + 'script' + '>'-->
+    <!--document.write(js)-->
+<!--</script>-->
+
+</body>
+</html>
