@@ -30,37 +30,208 @@
         css = '<'+'link '+'href='+"css/index.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
         document.write(css);
     </script>
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
     <title>EP雅莹母亲节</title>
 </head>
 <body>
 <div class="top">
     <img src="images/logo.png" class="logo">
-    <img src="images/music_btn.png" class="music-btn none">
-    <img src="images/rule_btn.png" class="rule-btn none">
+    <img src="images/music_btn.png" class="music-btn ">
+    <img src="images/barrageBtn.png" class="barrage-btn none">
 </div>
 
 
 <div class="container P_bg">
-    <img src="images/bg2.jpg" class="bg-pic">
+    <img src="images/bg.jpg" class="bg-pic">
 </div>
-
 
 <div class="container P_loading none">
     <div class="load-area">
-        <img src="images/load-pic.png" class="load-pic">
-        <span class="num color1">-0%-</span>
+        <img src="images/logo.png" class="load-logo">
+        <span class="num">-0%-</span>
+        <span class="infinite none">-<img src="images/loadgif.gif" class="">-</span>
     </div>
 </div>
 
-<div class="container P1">
+<div class="container P1 none">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="p1-page p1-page1">
+                    <img src="images/p1-1.jpg?v" class="p1-page-bg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p1-page p1-page2">
+                    <img src="images/p1-2.jpg" class="p1-page-bg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p1-page p1-page3">
+                    <img src="images/p1-3.jpg" class="p1-page-bg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p1-page p1-page4">
+                    <img src="images/p1-4.jpg" class="p1-page-bg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p1-page p1-page5">
+                    <img src="images/p1-5.jpg" class="p1-page-bg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p1-page p1-page6">
+                    <img src="images/p1-6.jpg" class="p1-page-bg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p1-page p1-page7">
+                    <img src="images/p1-7.jpg" class="p1-page-bg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .P1{}
+        .swiper-container{width:100%;height:100%;max-height:1050px;}
+</style>
 
+<div class="container P_Video none">
+
+    <img src="images/p1-text-1.png" class="pv-title">
+
+    <div class="videoBox">
+        <img src="images/p1-img-1.png" class="video-border">
+        <video src="video/video.mp4" id="video"  width="525" height="291" x-webkit-airplay="true" webkit-playsinline playsinline airplay="allow" x5-video-player-type="h5" class="iosPreload" poster="images/poster.png"></video>
+        <img src="images/vplayBtn.png?v1" class="play-btn">
+    </div>
+
+    <img src="images/p1-text-2.png" class="pv-txt">
+    <img src="images/p1-button-2.png" class="pv-btn">
+
+    <div class="pv-bottom pv-bottom1">
+        <img src="images/p2_img_4.png" class="p1">
+        <img src="images/p2_img_5.png" class="p2">
+        <img src="images/p2_img_6.png" class="p3">
+    </div>
+    <div class="pv-bottom pv-bottom2 none">
+        <img src="images/p2_img_4.png">
+    </div>
 </div>
 
+<style>
+    .P_Video{}
+        .pv-title{top:160px;left:50%;margin-left:-129px;}
+        .videoBox{width:561px;height:325px;position: absolute;top:290px;left:50%;margin-left:-280px;}
+            #video{position: absolute;z-index:1;left:18px;top:18px;}
+            .video-border{position: absolute;z-index:-1;}
+            .play-btn{left:50%;margin-left:-31px;top:50%;margin-top:-31px;z-index:2;}
+        .pv-txt{left:50%;margin-left:-120px;top:660px;}
+        .pv-btn{left:50%;margin-left:-160px;top:770px;}
+        .pv-bottom{position: absolute;top:950px;height:24px;}
+        .pv-bottom1{width:280px;left:50%;margin-left:-140px;}
+            .pv-bottom1 img:nth-child(1){left:0;}
+            .pv-bottom1 img:nth-child(2){left:50%;}
+            .pv-bottom1 img:nth-child(3){right:0}
+        .pv-bottom2{width:104px;left:50%;margin-left:-52px;}
+</style>
 
+<div class="container P_record">
+    <img src="images/p2-text-1.png" class="prec-title">
+
+    <div class="recordBox">
+        <p class="time">
+            <span class="s">5</span>
+            ''
+            <span class="ms">00</span>
+        </p>
+        <img src="images/yinbo.png" class="bo1 bo1-bopng">
+        <img src="images/yinbo.gif" class="bo1 bo1-bogif none">
+        <img src="images/p2-button-1.png" class="icon1 icon1-start">
+        <img src="images/p2-button-2.png" class="icon1 icon1-end none">
+
+        <img src="images/p2-text-2.png" class="btn-start none">
+
+        <div class="op-tip2">
+            <img src="images/p2-button-3.png" class="btn-listen">
+            <img src="images/p2-button-4.png" class="btn-restart">
+        </div>
+    </div>
+
+    <img src="images/p2-text-3.png" class="record-txt">
+
+    <div class="analysisBox">
+        <div class="analysisResult theme_color">语音识别的结果</div>
+        <img src="images/p2-button-7.png" class="submit">
+    </div>
+</div>
+
+<style>
+    .P_record{}
+        .prec-title{top:238px;left:50%;margin-left:-208px;}
+        .recordBox{position:absolute;width:640px;height:240px;top:410px;left:0;}
+            .time{text-align: center;color:black;}
+            .bo1{top:10px;}
+            .icon1{top:50%;margin-top:-55px;left:50%;margin-left:-55px;}
+            .btn-start{bottom:0;left:50%;margin-left:-32px;}
+            .op-tip2{position:absolute;bottom:0;width:300px;height:34px;left:50%;margin-left:-150px;}
+                .btn-listen{left:0;}
+                .btn-restart{right:0;}
+        .record-txt{top:676px;left:50%;margin-left:-194px;}
+        .analysisBox{width:492px;height:96px;position: absolute;left:50%;margin-left:-246px;top:840px;}
+            .analysisResult{width:377px;height:96px;line-height:96px;background-image:url("images/p2-img-1.png");background-repeat: no-repeat;left:0;top:0;font-size:26px;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;padding-left:20px;}
+            .submit{right:0;top:0;}
+</style>
+
+
+<div  class="container P_danmu none">
+    <div id="danmu" class="danmuBox"></div>
+    <div class="barrage animate ani-move_from_right none">
+        <div class="photo">
+            <img src="images/haha.gif">
+        </div>
+        <div class="contentBox">
+            <p class="content">这是一条弹幕信息</p>
+        </div>
+        <div class="close">
+            <img src="images/close.png">
+        </div>
+    </div>
+
+    <input class="input-danmu">
+    <button class="submit"></button>
+</div>
+<style>
+    .danmuBox{width:100%;height:50%;position: absolute;}
+    .barrage{position:absolute;border-radius:50px;background-color:rgba(0,0,0,0.8);height:50px;}
+    .photo{float:left;width:50px;height:50px;overflow:hidden;padding:5px;}
+    .photo img{width:100%;height:100%;border-radius: 50%;}
+    .barrage .contentBox{float:left;max-width:540px;}
+    .barrage .contentBox p.content{height:50px;line-height:50px;color:white;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding-right:10px;}
+    .barrage .close{float:left;width:50px;height:50px;}
+    .barrage .close img{margin:12px auto;}
+    .input-danmu{width:400px;height:50px;position:absolute;left:50%;margin-left:-200px;bottom:300px;border-radius:10px;border:solid 1px red;outline:none;background-color:rgba(0,0,0,0);line-height:50px;font-size:30px;color:black;padding:0 20px;text-align: center;}
+    /*.submit{position: absolute;width:100px;height:50px;left:50%;margin-left:-50px;bottom:200px;background-color:rgba(255,255,0,1);border-radius:10px;}*/
+</style>
 
 
 <div class="container P_share none">
+    <img src="images/fenxiang.png" class="share-pic">
+</div>
 
+<div class="container P_code none">
+    <img src="images/p10.jpg" style="top:0;left:0;" class="lazy">
+</div><!--二维码-->
+
+<div class="container P_end1 none"><!--参与过-->
+    <img src="images/p9.jpg" style="top:0;left:0;" class="lazy">
+</div>
+
+<div class="container P_end2 none"><!--未参与过-->
+    <img src="images/p8.jpg" style="top:0;left:0;" class="lazy">
 </div>
 
 <div class="hp">
@@ -71,15 +242,16 @@
 </div>
 <audio id="bgm" src="music/music.mp3" preload="auto" loop="true" class="iosPreload"></audio>
 <script src="js/jquery-1.11.3.min.js"></script>
-<input type="hidden" id="is_end" value="1" /><!--活动是否结束-->
-<input type="hidden" id="prizeType" value="1" /><!--奖品类型:0,1,2-->
+<script src="js/swiper.jquery.min.js"></script>
+
+
+<input type="hidden" id="is_end" value="0" /><!--活动是否结束-->
 <input type="hidden" id="have_guanzhu" value="1" /><!--是否关注-->
 <input type="hidden" id="is_vip" value="1" /><!--是否是vip-->
-<input type="hidden" id="havePay" value="1" /><!--是否付过钱-->
-<input type="hidden" id="FromTuiSong" value="0" /><!--是否从推送进页面-->
-<input type="hidden" id="isOpen4999" value="1" /><!--4999大奖是否已知-->
-<input type="hidden" id="haveFill" value="0" /><!--4999大奖已经填写过信息-->
 <input type="hidden" id="goRegist" value="0" /><!--刚才去注册了一下-->
+<input type="hidden" id="prizeType" value="1" /><!--奖品类型:1,2,3,4,5-->
+<input type="hidden" id="FromTuiSong" value="0" /><!--是否从推送进页面-->
+<input type="hidden" id="haveFill" value="0" /><!--已经填写过信息-->
 
 <input type="hidden" id="openid" value="" />
 <input type="hidden" id="lottery_result" value="" />
@@ -89,11 +261,11 @@
 <input type="hidden" id="signature" value="" />
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
-<!--<script>-->
-    <!--var js;-->
-    <!--js = '<' + 'script ' + 'src=' + "js/index.js?v" + Math.random() + '>' + '</' + 'script' + '>'-->
-    <!--document.write(js)-->
-<!--</script>-->
+<script>
+    var js;
+    js = '<' + 'script ' + 'src=' + "js/index.js?v" + Math.random() + '>' + '</' + 'script' + '>'
+    document.write(js)
+</script>
 
 </body>
 </html>

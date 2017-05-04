@@ -6,3 +6,7 @@
 *.txt
 *.rar
 js/jquery-1.11.3.min.js
+*.gif
+js/swiper.jquery.min.js
+css/swiper.min.css
+swiper.min.css

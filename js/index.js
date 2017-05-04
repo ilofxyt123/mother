@@ -386,8 +386,14 @@
             this.picUrl+"txt-3.png",
             this.picUrl+"weile.png"
         ];
+
+        this.Swiper = undefined;
     };
     main.init=function(){
+        this.Swiper = new Swiper(".P1 .swiper-container",{
+            direction : 'vertical',//纵向
+        })
+
 
     };
     main.start=function(){
@@ -1043,13 +1049,15 @@
     };
 
     a.main = main;
+    console.log(a)
 
 /*-----------------------------事件绑定--------------------------------*/
 }(window));
 $(function(){
+    main.init()
     main.addEvent();
-    main.start();
-    main.playbgm();
+    // main.start();
+    // main.playbgm();
 });
 
 

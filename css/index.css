@@ -42,8 +42,21 @@ img{position: absolute;}
 
 .selectBox{width:462px;height:150px;position: absolute;left:50%;margin-left:-231px;}
 
+.top{height:44px;width:640px;position:absolute;top:16px;z-index:99;}
+    .top .logo{top:5px;left:30px;}
+    .music-btn{top:0;right:20px;}
+    .rule-btn{top:0;right:80px;}
+    .barrage-btn{top:54px;right:20px;}
 
+.P_bg{z-index:1;}
+    .bg-pic{left:0;top:0;}
 
+.P_loading{}
+    .load-area{width:120px;position: absolute;left:50%;margin-left:-60px;top:420px;}
+        .load-logo{position:static;margin:0 auto;}
+        .num{display:block;width:100%;text-align: center;color:black;letter-spacing: 4px;margin-top:7px;}
+        span.infinite{position: absolute;width:100%;top:40px;text-align: center;}
+        span.infinite img{position:static;display:inline-block;width:34px;height:16px;}
 
-
-
+.P_share{background-color: rgba(0,0,0,0.8);z-index:100;}
+    .share-pic{top:35px;right:50px;}
