@@ -139,7 +139,7 @@
         .pv-bottom2{width:104px;left:50%;margin-left:-52px;}
 </style>
 
-<div class="container P_record">
+<div class="container P_record none">
     <img src="images/p2-text-1.png" class="prec-title">
 
     <div class="recordBox">
@@ -163,10 +163,13 @@
 
     <img src="images/p2-text-3.png" class="record-txt">
 
-    <div class="analysisBox">
+    <div class="analysisBox none">
         <div class="analysisResult theme_color">语音识别的结果</div>
         <img src="images/p2-button-7.png" class="submit">
     </div>
+
+    <img src="images/p2-button-5.png" class="prec-prizeBtn">
+    <img src="images/p2-button-6.png" class="prec-shareBtn">
 </div>
 
 <style>
@@ -184,8 +187,87 @@
         .analysisBox{width:492px;height:96px;position: absolute;left:50%;margin-left:-246px;top:840px;}
             .analysisResult{width:377px;height:96px;line-height:96px;background-image:url("images/p2-img-1.png");background-repeat: no-repeat;left:0;top:0;font-size:26px;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;padding-left:20px;}
             .submit{right:0;top:0;}
+        .prec-prizeBtn{top:800px;left:50%;margin-left:-160px;}
+        .prec-shareBtn{top:890px;left:50%;margin-left:-160px;}
 </style>
 
+<div class="container P_prize_result">
+    <img src="images/prztitle.png" class="prz-title">
+
+
+    <div class="ui-prizeBox prizeBox1">
+        <div class="prizeType1">
+            <img src="images/p3-img-5.png" class="ui-env1">
+            <img src="images/p3-img-4.png" class="ui-env2">
+            <img src="images/p3-img-1.png" class="ui-quan">
+            <img src="images/p3-img-6.png" class="ui-flower1">
+        </div>
+        <img src="images/" class="prize-txt">
+    </div>
+
+    <div class="ui-prizeBox prizeBox2 none">
+        <div class="prizeType1">
+            <img src="images/p3-img-5.png" class="ui-env1">
+            <img src="images/p3-img-4.png" class="ui-env2">
+            <img src="images/p3-img-2.png" class="ui-quan">
+            <img src="images/p3-img-6.png" class="ui-flower1">
+        </div>
+        <img src="images/" class="prize-txt">
+    </div>
+
+    <div class="ui-prizeBox prizeBox3 none">
+        <div class="prizeType1">
+            <img src="images/p3-img-5.png" class="ui-env1">
+            <img src="images/p3-img-4.png" class="ui-env2">
+            <img src="images/p3-img-3.png" class="ui-quan">
+            <img src="images/p3-img-6.png" class="ui-flower1">
+        </div>
+        <img src="images/" class="prize-txt">
+    </div>
+
+    <div class="ui-prizeBox prizeBox4 none">
+        <div class="prizeType2">
+            <img src="images/p3-img-8.png" class="notquan">
+            <img src="images/p3-img-7.png" class="ui-flower2">
+        </div>
+        <img src="images/" class="prize-txt">
+    </div>
+
+    <div class="ui-prizeBox prizeBox5 none">
+        <div class="prizeType2">
+            <img src="images/p3-img-9.png" class="notquan">
+            <img src="images/p3-img-7.png" class="ui-flower2">
+        </div>
+        <img src="images/" class="prize-txt">
+    </div>
+
+    <div class="ui-btnGroup prz-btnGroup1">
+        <img src="images/p3-button-1.png" class="btn1">
+        <img src="images/p3-button-2.png" class="btn2">
+    </div>
+    <div class="ui-btnGroup prz-btnGroup2 none">
+        <img src="images/button-1.png" class="btn1">
+        <img src="images/p3-button-2.png" class="btn2">
+    </div>
+
+</div>
+
+<style>
+    .P_prize_result{}
+        .prz-title{top:140px;left:50%;margin-left:-73px;}
+        .ui-prizeBox{width:640px;height:380px;top:254px;position: absolute;}
+            .prizeType1{width:410px;height:260px;position:relative;left:100px;}
+                .ui-env1{left:40px;z-index:1;}
+                .ui-env2{left:70px;top:64px;z-index: 3;}
+                .ui-quan{left:60px;top:60px;z-index:4}
+                .ui-flower1{z-index:2;left:0;top:120px;}
+            .prize-txt{margin:0 auto;}
+        .ui-btnGroup{width:320px;height:150px;top:704px;position: absolute;left:50%;margin-left:-160px;}
+            .ui-btnGroup .btn1{top:0;}
+            .ui-btnGroup .btn2{bottom:0;}
+
+
+</style>
 
 <div  class="container P_danmu none">
     <div id="danmu" class="danmuBox"></div>
