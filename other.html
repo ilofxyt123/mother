@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var ua = navigator.userAgent;
+        var phoneWidth = parseInt(window.screen.width), phoneScale = phoneWidth / 640;
+        if (/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            var qqv = ua.match(/MQQBrowser\/(\d+)/) ? ua.match(/MQQBrowser\/(\d+)/)[1] : 0;
+            if (version > 2.3 && qqv < 6) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ", maximum-scale = " + phoneScale + ', target-densitydpi=device-dpi,user-scalable=no">')
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi,user-scalable=no">')
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">')
+        }
+    </script>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <script>
+        var css;
+        css = '<'+'link '+'href='+"css/common.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css);
+        css = '<'+'link '+'href='+"css/animate.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css);
+    </script>
+    <title>EP雅莹母亲节</title>
+    <style>
+        img{position: absolute;}
+    </style>
+</head>
+<body>
+<div class="top">
+    <img src="images/logo.png" class="logo">
+    <img src="images/music_btn.png" class="music-btn ">
+    <img src="images/barrageBtn.png" class="barrage-btn barrage-open">
+    <img src="images/button-0.png" class="barrage-btn barrage-close none">
+</div>
+
+
+<div class="container P_bg">
+    <img src="images/bg.jpg" class="bg-pic">
+</div>
+
+
+<div class="container P1">
+    <img src="images/otttl.png" class="rec-title">
+    <div class="recBox">
+        <img src="images/p7-img-1.png" class="rec-bg">
+        <img src="images/yinboxiao.png" class="bostatic">
+        <img src="images/bo.gif" class="bogif none">
+        <img src="images/voiceBtn.png" class="rec-play">
+    </div>
+    <img src="images/p1-button-2.png" class="goIndex">
+</div>
+
+<style>
+    .P1{}
+        .rec-title{left:50%;margin-left:-235px;top:150px;}
+        .recBox{width:579px;height:416px;position: absolute;left:50%;margin-left:-290px;top:300px;}
+            .rec-bg{z-index:-1;}
+            .bostatic{left:50%;margin-left:-270px;top:147px;}
+            .bogif{left:50%;margin-left:-270px;top:147px;}
+            .rec-play{left:50%;top:50%;margin-left:-55px;margin-top:-55px;}
+        .goIndex{left:50%;margin-left:-160px;top:854px;}
+</style>
+
+<div  class="P_danmu none">
+    <div id="danmu" class="danmuBox"></div>
+    <div class="barrage animate ani-move_from_right none">
+        <!--<div class="photo">-->
+        <!--<img src="images/haha.gif">-->
+        <!--</div>-->
+        <div class="contentBox">
+            <p class="content">这是一条弹幕信息</p>
+        </div>
+        <div class="close">
+            <img src="images/close.png">
+        </div>
+    </div>
+</div>
+
+<div class="hp">
+    <div class="hp_box">
+        <img src="images/phone.png" class="phone">
+        <img src="images/weile.png" class="hp_tip">
+    </div>
+</div>
+<audio id="bgm" src="music/music.mp3" preload="auto" loop="true" class="iosPreload"></audio>
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<input type="hidden" id="openid" value="" />
+<input type="hidden" id="lottery_result" value="" />
+<input type="hidden" id="appId" value="" />
+<input type="hidden" id="timestamp" value="" />
+<input type="hidden" id="nonceStr" value="" />
+<input type="hidden" id="signature" value="" />
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script>
+    var js;
+    js = '<' + 'script ' + 'src=' + "js/other.js?v" + Math.random() + '>' + '</' + 'script' + '>'
+    document.write(js)
+</script>
+
+</body>
+</html>

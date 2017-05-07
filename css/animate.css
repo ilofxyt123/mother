@@ -179,7 +179,7 @@
     animation:ani-fadeIn 1s linear 1 forwards;
 }
 
-@-webkit-keyframes ani-Rotate {
+@-webkit-keyframes ani-bgmRotate {
     0%{
         -webkit-transform:rotate(0deg);
     }
@@ -187,7 +187,7 @@
         -webkit-transform:rotate(360deg);
     }
 }
-@keyframes ani-Rotate {
+@keyframes ani-bgmRotate {
     0%{
         transform:rotate(0deg);
     }
@@ -196,11 +196,43 @@
     }
 }
 
-.ani-Rotate{
-    -webkit-animation:ani-Rotate 1s linear 0s infinite forwards;
-    animation:ani-Rotate 1s linear 0s infinite forwards;
+.ani-bgmRotate{
+    -webkit-animation:ani-bgmRotate 1s linear 0s infinite forwards;
+    animation:ani-bgmRotate 1s linear 0s infinite forwards;
 }
 .ani-Pause{
     animation-play-state:paused;
     -webkit-animation-play-state:paused;
+}
+.animate.ani-linear{
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.animate.ani-times-infinite{
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+}
+.animate.ani-times1{
+    -webkit-animation-iteration-count:1;
+    animation-iteration-count:1;
+}
+@-webkit-keyframes ani-move_from_right {
+    0%{
+        -webkit-transform:translateX(100%);
+    }
+    100% {
+        -webkit-transform:translateX(-640px);
+    }
+}
+@keyframes ani-move_from_right {
+    0%{
+        transform:translateX(100%);
+    }
+    100% {
+        transform:translateX(-640px);
+    }
+}
+.ani-move_from_right{
+    -webkit-animation-name:ani-move_from_right;
+    animation-name:ani-move_from_right;
 }

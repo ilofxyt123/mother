@@ -34,21 +34,21 @@
     <title>EP雅莹母亲节</title>
 </head>
 <body>
-<div class="top">
+<div class="top none">
     <img src="images/logo.png" class="logo">
     <img src="images/music_btn.png" class="music-btn ">
-    <img src="images/barrageBtn.png" class="barrage-btn none">
+    <img src="images/barrageBtn.png" class="barrage-btn barrage-open none">
+    <img src="images/button-0.png" class="barrage-btn barrage-close none">
 </div>
-
 
 <div class="container P_bg">
     <img src="images/bg.jpg" class="bg-pic">
 </div>
 
-<div class="container P_loading none">
+<div class="container P_loading">
     <div class="load-area">
         <img src="images/logo.png" class="load-logo">
-        <span class="num">-0%-</span>
+        <span class="num"></span>
         <span class="infinite none">-<img src="images/loadgif.gif" class="">-</span>
     </div>
 </div>
@@ -59,45 +59,53 @@
             <div class="swiper-slide">
                 <div class="p1-page p1-page1">
                     <img src="images/p1-1.jpg?v" class="p1-page-bg">
+                    <img src="images/p0-text-1.png" class="p1-page-txt">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page2">
                     <img src="images/p1-2.jpg" class="p1-page-bg">
+                    <img src="images/p0-text-2.png" class="p1-page-txt">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page3">
                     <img src="images/p1-3.jpg" class="p1-page-bg">
+                    <img src="images/p0-text-3.png" class="p1-page-txt">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page4">
                     <img src="images/p1-4.jpg" class="p1-page-bg">
+                    <img src="images/p0-text-4.png" class="p1-page-txt">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page5">
                     <img src="images/p1-5.jpg" class="p1-page-bg">
+                    <img src="images/p0-text-5.png" class="p1-page-txt">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page6">
                     <img src="images/p1-6.jpg" class="p1-page-bg">
+                    <img src="images/p0-text-6.png" class="p1-page-txt">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page7">
                     <img src="images/p1-7.jpg" class="p1-page-bg">
+                    <img src="images/p0-text-7.png" class="p1-page-txt">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div style="width:100%;height:100%;">
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-<style>
-    .P1{}
-        .swiper-container{width:100%;height:100%;max-height:1050px;}
-</style>
 
 <div class="container P_Video none">
 
@@ -112,50 +120,33 @@
     <img src="images/p1-text-2.png" class="pv-txt">
     <img src="images/p1-button-2.png" class="pv-btn">
 
-    <div class="pv-bottom pv-bottom1">
-        <img src="images/p2_img_4.png" class="p1">
+    <div class="pv-bottom pv-bottom1 none">
+        <img src="images/p2_img_4.png" class="p1 rule-btn">
         <img src="images/p2_img_5.png" class="p2">
         <img src="images/p2_img_6.png" class="p3">
     </div>
     <div class="pv-bottom pv-bottom2 none">
-        <img src="images/p2_img_4.png">
+        <img src="images/p2_img_4.png" class="rule-btn">
     </div>
 </div>
-
-<style>
-    .P_Video{}
-        .pv-title{top:160px;left:50%;margin-left:-129px;}
-        .videoBox{width:561px;height:325px;position: absolute;top:290px;left:50%;margin-left:-280px;}
-            #video{position: absolute;z-index:1;left:18px;top:18px;}
-            .video-border{position: absolute;z-index:-1;}
-            .play-btn{left:50%;margin-left:-31px;top:50%;margin-top:-31px;z-index:2;}
-        .pv-txt{left:50%;margin-left:-120px;top:660px;}
-        .pv-btn{left:50%;margin-left:-160px;top:770px;}
-        .pv-bottom{position: absolute;top:950px;height:24px;}
-        .pv-bottom1{width:280px;left:50%;margin-left:-140px;}
-            .pv-bottom1 img:nth-child(1){left:0;}
-            .pv-bottom1 img:nth-child(2){left:50%;}
-            .pv-bottom1 img:nth-child(3){right:0}
-        .pv-bottom2{width:104px;left:50%;margin-left:-52px;}
-</style>
 
 <div class="container P_record none">
     <img src="images/p2-text-1.png" class="prec-title">
 
     <div class="recordBox">
-        <p class="time">
+        <p class="time one">
             <span class="s">5</span>
             ''
             <span class="ms">00</span>
         </p>
         <img src="images/yinbo.png" class="bo1 bo1-bopng">
         <img src="images/yinbo.gif" class="bo1 bo1-bogif none">
-        <img src="images/p2-button-1.png" class="icon1 icon1-start">
-        <img src="images/p2-button-2.png" class="icon1 icon1-end none">
+        <img src="images/p2-button-1.png" class="icon1 icon1-start one">
+        <img src="images/p2-button-2.png" class="icon1 icon1-end two none">
 
-        <img src="images/p2-text-2.png" class="btn-start none">
+        <img src="images/p2-text-2.png" class="btn-start one">
 
-        <div class="op-tip2">
+        <div class="op-tip2 two none">
             <img src="images/p2-button-3.png" class="btn-listen">
             <img src="images/p2-button-4.png" class="btn-restart">
         </div>
@@ -163,33 +154,19 @@
 
     <img src="images/p2-text-3.png" class="record-txt">
 
-    <div class="analysisBox none">
-        <div class="analysisResult theme_color">语音识别的结果</div>
-        <img src="images/p2-button-7.png" class="submit">
+    <div class="analysisBox">
+        <div class="analysisResult theme_color"></div>
+        <img src="images/p2-button-7.png" class="submit ui-chrome-btn-disable">
     </div>
 
-    <img src="images/p2-button-5.png" class="prec-prizeBtn">
-    <img src="images/p2-button-6.png" class="prec-shareBtn">
-</div>
+    <div class="ui-btnGroup prec-btnGroup none">
+        <img src="images/p2-button-5.png" class="btn1">
+        <img src="images/p2-button-6.png" class="btn2">
+    </div>
 
-<style>
-    .P_record{}
-        .prec-title{top:238px;left:50%;margin-left:-208px;}
-        .recordBox{position:absolute;width:640px;height:240px;top:410px;left:0;}
-            .time{text-align: center;color:black;}
-            .bo1{top:10px;}
-            .icon1{top:50%;margin-top:-55px;left:50%;margin-left:-55px;}
-            .btn-start{bottom:0;left:50%;margin-left:-32px;}
-            .op-tip2{position:absolute;bottom:0;width:300px;height:34px;left:50%;margin-left:-150px;}
-                .btn-listen{left:0;}
-                .btn-restart{right:0;}
-        .record-txt{top:676px;left:50%;margin-left:-194px;}
-        .analysisBox{width:492px;height:96px;position: absolute;left:50%;margin-left:-246px;top:840px;}
-            .analysisResult{width:377px;height:96px;line-height:96px;background-image:url("images/p2-img-1.png");background-repeat: no-repeat;left:0;top:0;font-size:26px;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;padding-left:20px;}
-            .submit{right:0;top:0;}
-        .prec-prizeBtn{top:800px;left:50%;margin-left:-160px;}
-        .prec-shareBtn{top:890px;left:50%;margin-left:-160px;}
-</style>
+    <!--<img src="images/p2-button-5.png" class="prec-prizeBtn none">-->
+    <!--<img src="images/p2-button-6.png" class="prec-shareBtn none">-->
+</div>
 
 <div class="container P_prize_result none">
     <img src="images/prztitle.png" class="prz-title">
@@ -228,7 +205,7 @@
     </div>
 
     <!--矿泉水-->
-    <div class="ui-prizeBox prizeBox4">
+    <div class="ui-prizeBox prizeBox4 none">
         <div class="prizeType2">
             <img src="images/p3-img-8.png" class="notquan">
             <img src="images/p3-img-7.png" class="ui-flower2">
@@ -251,38 +228,14 @@
         <img src="images/p3-button-2.png" class="btn2">
     </div>
     <!--实物按钮组-->
-    <div class="ui-btnGroup prz-btnGroup2">
-        <img src="images/button-1.png" class="btn1">
+    <div class="ui-btnGroup prz-btnGroup2 none">
+        <img src="images/fillBtn.png" class="btn1">
         <img src="images/p3-button-2.png" class="btn2">
     </div>
 
 </div>
 
-<style>
-    .P_prize_result{}
-        .prz-title{top:140px;left:50%;margin-left:-73px;}
-
-        .ui-prizeBox{width:640px;height:380px;top:254px;position: absolute;}
-            .prizeType1{width:410px;height:260px;position:relative;left:100px;}
-                .ui-env1{left:40px;z-index:1;}
-                .ui-env2{left:70px;top:64px;z-index: 3;}
-                .ui-quan{left:60px;top:60px;z-index:4}
-                .ui-flower1{z-index:2;left:0;top:120px;}
-            .prizeType2{width:410px;height:260px;position:relative;left:100px;}
-            .notquan{top:0;position: relative;margin:0 auto;z-index:2;}
-            .prizeBox5 .notquan{top:53px;left:49px;}
-            .ui-flower2{top:94px;z-index:1;left:50%;margin-left:-175px;}
-            .prizeBox5 .ui-flower2{top:34px;margin-left:-205px;}
-            .prize-txt{position:static;margin:55px auto;}
-
-        .ui-btnGroup{width:320px;height:150px;top:704px;position: absolute;left:50%;margin-left:-160px;}
-        .ui-btnGroup .btn1{top:0;}
-        .ui-btnGroup .btn2{bottom:0;}
-
-
-</style>
-
-<div class="container P_chaxun">
+<div class="container P_chaxun none">
     <img src="images/p5-text-1.png" class="pcx-title">
 
     <!--88-->
@@ -315,7 +268,7 @@
     </div>
 
     <!--木头-->
-    <div class="ui-chaxunBox chaxunBox5">
+    <div class="ui-chaxunBox chaxunBox5 none">
         <img src="images/p5-img-5.png" class="cxpic cxpic3">
         <p class="add_info">
             <img src="images/text.png" class="txt">
@@ -335,29 +288,13 @@
     </div>
 
     <!--实物按钮组-->
-    <div class="ui-btnGroup chaxun-btnGroup2">
+    <div class="ui-btnGroup chaxun-btnGroup2 none">
         <img src="images/p3-button-2.png" class="btn2">
     </div>
 
     <img src="images/esc.png" class="pcxxx"><!--关闭-->
 
 </div><!--查询结果页-->
-
-<style>
-    .P_chaxun{}
-        .pcx-title{top:140px;left:50%;margin-left:-96px;}
-        .ui-chaxunBox{width:640px;height:380px;top:254px;position: absolute;}
-            .cxpic{position:relative;margin:0 auto;}
-            .cxpic1{left:-20px;}
-            .cxpic2{}
-            .cxpic3{}
-            p.add_info{height:30px;line-height:30px;text-align:center;margin-top:50px;color:black;}
-            img.txt{position: static;display: inline-block;}
-        .pcxxx{left:50%;margin-left:-20px;top:900px;}
-
-
-
-</style>
 
 <div class="container P_chaxunDoor none">
     <div class="pcdBox">
@@ -380,15 +317,6 @@
         <p class="pcd-result">浙江省嘉兴市嘉兴八佰伴店</p>
     </div>
 </div><!--查询可使用门店-->
-
-<style>
-    .P_chaxunDoor{background-color: rgba(0,0,0,0.8);z-index: 101;}
-        .pcdBox{width:463px;height:674px;position: absolute;left:50%;margin-left:-231px;top:160px;}
-            .pcdxx{position:absolute;right:18px;top:20px;width:40px;height:40px;}
-            .pcd-bg{z-index:-1;}
-            .selectBox2{width:390px;height:140px;top:120px;left:50%;margin-left:-195px;}
-            p.pcd-result{width:390px;height:50px;line-height:50px;position: absolute;top:255px;left:50%;margin-left:-195px;color:black;text-align: center;}
-</style>
 
 <div class="container P_fill none">
     <div class="fillBox black">
@@ -413,42 +341,18 @@
                 <option>嘉兴八佰伴店</option>
             </select>
         </div>
-        <img src="images/p4-text-1.png" class="fil-txt">
-        <img src="images/p4-button-1.png" class="fil-btn">
+        <img src="images/p4-text-1.png" class="fill-txt">
+        <img src="images/p4-button-1.png" class="fill-btn">
 
     </div>
 </div>
 
-<style>
-    .ui-selectBox{position: absolute;}
-        .ui-select{line-height:60px;background-color:rgba(0,0,0,0);position:absolute;text-align:center;outline:none;border:none;font-size:26px;padding-left:36px;-webkit-appearance:none;z-index:2;}
-    .P_fill{}
-
-        .fillBox{width:538px;height:786px;position: absolute;top:120px;left:50%;margin-left:-269px;}
-            .infoBox{position:absolute;width:390px;height:140px;z-index:2;left:50%;margin-left:-195px;top:164px;}
-                .infoBox .input{position:absolute;width:390px;height:60px;line-height:60px;outline:none;border:none;font-size:26px;background-color:rgba(0,0,0,0);text-align: center;}
-                .infoBox .input::-webkit-input-placeholder{color:black;text-align:left;text-indent:36px;}
-            .name-input{top:0;}
-            .phone-input{bottom:0;}
-            .fill-bg{z-index:1;}
-            .selectBox1{width:390px;height:140px;top:324px;left:50%;margin-left:-195px;}
-                .selectBox1 .select1,.selectBox2 .select1{width:186px;height:60px;top:0;left:0;}
-                .selectBox1 .select2,.selectBox2 .select2{width:186px;height:60px;top:0;right:0;}
-                .selectBox1 .select3,.selectBox2 .select3{width:390px;height:60px;bottom:0;left:0;}
-
-            .fil-txt{left:50%;margin-left:-200px;top:520px;z-index:2;}
-            .fil-btn{left:50%;margin-left:-160px;top:660px;z-index:2;}
-
-
-</style>
-
-
-<div  class="container P_danmu none">
+<div  class="P_danmu none">
     <div id="danmu" class="danmuBox"></div>
     <div class="barrage animate ani-move_from_right none">
-        <div class="photo">
-            <img src="images/haha.gif">
-        </div>
+        <!--<div class="photo">-->
+            <!--<img src="images/haha.gif">-->
+        <!--</div>-->
         <div class="contentBox">
             <p class="content">这是一条弹幕信息</p>
         </div>
@@ -456,22 +360,7 @@
             <img src="images/close.png">
         </div>
     </div>
-
-    <input class="input-danmu">
-    <button class="submit"></button>
 </div>
-<style>
-    .danmuBox{width:100%;height:50%;position: absolute;}
-    .barrage{position:absolute;border-radius:50px;background-color:rgba(0,0,0,0.8);height:50px;}
-    .photo{float:left;width:50px;height:50px;overflow:hidden;padding:5px;}
-    .photo img{width:100%;height:100%;border-radius: 50%;}
-    .barrage .contentBox{float:left;max-width:540px;}
-    .barrage .contentBox p.content{height:50px;line-height:50px;color:white;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding-right:10px;}
-    .barrage .close{float:left;width:50px;height:50px;}
-    .barrage .close img{margin:12px auto;}
-    .input-danmu{width:400px;height:50px;position:absolute;left:50%;margin-left:-200px;bottom:300px;border-radius:10px;border:solid 1px red;outline:none;background-color:rgba(0,0,0,0);line-height:50px;font-size:30px;color:black;padding:0 20px;text-align: center;}
-    /*.submit{position: absolute;width:100px;height:50px;left:50%;margin-left:-50px;bottom:200px;background-color:rgba(255,255,0,1);border-radius:10px;}*/
-</style>
 
 <div class="container P_rule none">
     <div class="ruleBox">
@@ -484,16 +373,6 @@
     </div>
 </div>
 
-<style>
-    .P_rule{}
-
-        .ruleBox{width:538px;height:881px;position: absolute;left:50%;margin-left:-269px;top:90px;}
-            .rulexx{position:absolute;width:40px;height:40px;right:26px;top:26px;}
-            .rule-bg{z-index:-1;}
-            .rule_scrollArea{position: absolute;width:424px;height:670px;left:50%;margin-left:-212px;top:120px;overflow:hidden;}
-                .rule-txt{}
-            .P_rule .arraw{left:50%;margin-left:-27px;top:810px;}
-</style>
 <div class="container P_share none">
     <img src="images/fenxiang.png" class="share-pic">
 </div>
@@ -506,46 +385,39 @@
     <img src="images/p9.jpg" style="top:0;left:0;" class="lazy">
     <img src="images/p9-button.png" class="pend-btn">
 </div>
-<style>
-    .P_end{}
-        .pend-btn{left:50%;margin-left:-160px;top:760px;}
-</style>
 
 <div class="container P_end2 none"><!--未参与过-->
     <img src="images/p8.jpg" style="top:0;left:0;" class="lazy">
 </div>
 
 <div class="container P_alert none">
-    <div class="ui-alertBox alertBox1">
+    <div class="ui-alertBox alertBox1 none"><!--单行-->
         <img src="images/esc-1.png" class="alertxx">
-        <img src="images/text-1.png" class="alerttip">
+        <img src="images/text-1.png" class="alerttip"><!--友情提示-->
+        <p class="alert-txt theme_color"></p>
 
-        <img src="images/" class="alertbtn alertbtn1">
-        <img src="images/" class="alertbtn alertbtn2">
-        <img src="images/" class="alertbtn alertbtn3">
+        <img src="images/button-3.png" class="alertbtn alertbtn1 none"><!--立即填写-->
+        <!--<img src="images/" class="alertbtn alertbtn3">-->
     </div>
 
-    <div class="ui-alertBox alertBox2">
-        <img src="images/esc-1.png" class="alertxx">
+    <div class="ui-alertBox alertBox2 none"><!--多行-->
+        <!--<img src="images/esc-1.png" class="alertxx">-->
         <img src="images/text-1.png" class="alerttip">
+        <p class="alert-txt theme_color"></p>
 
-        <img src="images/" class="alertbtn alertbtn1">
+        <img src="images/button-1.png" class="alertbtn alertbtn1 none"><!--填写领奖信息-->
+    </div>
+
+    <div class="ui-alertBox alertBox3 like-table none"><!--多行-->
+        <!--<img src="images/esc-1.png" class="alertxx">-->
+        <p class="alert-txt theme_color like-cell">
+
+        </p>
+
+        <img src="images/button-2.png" class="alertbtn alertbtn1 none"><!--前往注册-->
+
     </div>
 </div>
-
-<style>
-    .P_alert{}
-        .ui-alertBox{}
-            .alertxx{}
-            .alertbtn{}
-
-        .alertBox1{}
-            .alertBox1 .alerttip{}
-        .alertBox2{}
-            .alertBox2 .alerttip{}
-
-</style>
-
 
 <div class="hp">
     <div class="hp_box">
@@ -562,12 +434,11 @@
 <input type="hidden" id="have_guanzhu" value="1" /><!--是否关注-->
 <input type="hidden" id="is_vip" value="1" /><!--是否是vip-->
 <input type="hidden" id="goRegist" value="0" /><!--刚才去注册了一下-->
-<input type="hidden" id="prizeType" value="1" /><!--奖品类型:1,2,3,4,5-->
+<input type="hidden" id="prizeType" value="0" /><!--奖品类型:0,1,2,3,4,5;0表示没抽过-->
 <input type="hidden" id="FromTuiSong" value="0" /><!--是否从推送进页面-->
 <input type="hidden" id="haveFill" value="0" /><!--已经填写过信息-->
 
 <input type="hidden" id="openid" value="" />
-<input type="hidden" id="lottery_result" value="" />
 <input type="hidden" id="appId" value="" />
 <input type="hidden" id="timestamp" value="" />
 <input type="hidden" id="nonceStr" value="" />

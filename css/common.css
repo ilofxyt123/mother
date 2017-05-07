@@ -134,8 +134,30 @@ a, button, input {
 }
 
 .none{
-    display: none;
+    display: none !important;
 }
 
 .theme_color{color:#b79347;}
 .black{color:black;}
+
+.top{height:44px;width:640px;position:absolute;top:16px;z-index:99;}
+.top .logo{top:5px;left:30px;}
+.music-btn{top:0;right:20px;}
+.barrage-btn{top:54px;right:20px;}
+.ui-chrome-btn-disable{  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */ filter: grayscale(100%);  }
+
+.P_bg{z-index:1;}
+.bg-pic{left:0;top:0;}
+
+.like-table{display:table;}
+.like-cell{display:table-cell;}
+
+.P_danmu{position: absolute;width:100%;height:0;top:20px;z-index:15;}
+    .danmuBox{width:100%;height:100%;position: absolute;}
+    .barrage{position:absolute;border-radius:10px;background-color:rgba(214,191,149,0.8);height:50px;}
+    .photo{float:left;width:50px;height:50px;overflow:hidden;padding:5px;}
+    .photo img{width:40px;height:40px;border-radius: 50%;}
+    .barrage .contentBox{float:left;max-width:540px;}
+    .barrage .contentBox p.content{height:50px;line-height:50px;color:white;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding-right:10px;padding-left:10px;}
+    .barrage .close{float:left;width:50px;height:50px;}
+    .barrage .close img{margin:12px auto;}
