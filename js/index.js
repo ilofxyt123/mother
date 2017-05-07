@@ -404,7 +404,7 @@
         this.pages = {
             pvideo:"pvideo",
             pend1:"pend1"
-        };
+        };//需要被记录的页面
 
         this.touch ={
             ScrollObj:undefined,
