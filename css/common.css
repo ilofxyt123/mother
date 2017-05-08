@@ -137,6 +137,7 @@ a, button, input {
     display: none !important;
 }
 
+.opacity{opacity:0;}
 .theme_color{color:#b79347;}
 .black{color:black;}
 
@@ -148,6 +149,7 @@ a, button, input {
 
 .P_bg{z-index:1;}
 .bg-pic{left:0;top:0;}
+.bg-flower{bottom:0;right:0;}
 
 .like-table{display:table;}
 .like-cell{display:table-cell;}
