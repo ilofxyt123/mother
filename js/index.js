@@ -201,7 +201,7 @@
         this.haveOver = 0;//有多少个去了最右边
         this.barrages = [];//所有的弹幕
         this.upload="";//用于上传的新弹幕
-        this.download = [];
+        this.downloadArr = [];
         this.isOpen = false;
     };
     Barrage.CreateOneBarrage = function(config){
@@ -566,6 +566,7 @@
         ];
 
         this.Swiper = undefined;
+        this.SwiperIndex = undefined;
 
         /*录音数据*/
         this.isRecording = false;//正在录音标志
@@ -601,14 +602,7 @@
             resistanceRatio : 0,//边缘抵抗
             allowSwipeToPrev:false,
             onSlideChangeEnd: function(swiper){
-                console.log(swiper.activeIndex);
-                if(swiper.activeIndex > 6){
-                    main.p1leave();
-                    main.pvideo();
-                    main.showBarrage();
-                    Barrage.updateBarrageContainerSize();
-                    Barrage.AddAllBarrageToContainer();
-                }
+                main.SwiperIndex = swiper.activeIndex;
             }
         });
         ///////////////Swiper初始化///////////////
@@ -618,13 +612,19 @@
         ///////////////弹幕处理///////////////
     };
     main.start=function(){
-        Utils.preloadImage(this.ImageList,function(){main.startCallback()},true);
+        Utils.preloadImage(this.ImageList,function(){main.startCallback()},false);
         this.playbgm();
     };
     main.startCallback=function(){
+        // for(var i=0;i<Barrage.downloadArr.length;i++){
+        //     Barrage.CreateOneBarrage({
+        //         text:Barrage.downloadArr[i]
+        //     })
+        // }
+        Utils.lazyLoad();
         main.addEvent();
         $(".num").fadeOut();
-        $(".infinite").fadeIn();
+        // $(".infinite").fadeIn();
         setTimeout(function(){
             main.loadleave();
             ///////////////活动结束///////////////
@@ -888,6 +888,8 @@
         $(".alertbtn").addClass("none");
     };
     main.initBarrage = function(){
+        // Barrage.downloadArr = getDanMu();
+
 
         for(var i=0;i<50;i++){
             Barrage.CreateOneBarrage({
@@ -908,8 +910,27 @@
         Barrage.isOpen = false;
     };
     main.addEvent = function(){
-        var _self = this;
-        $("").on("",function(){});
+        document.ontouchmove = function(e){
+            e.preventDefault();
+        };
+
+        $(".P1").on({
+            touchstart:function(e){
+                main.touch.StartY = e.originalEvent.changedTouches[0].pageY;
+            },
+            touchmove:function(e){
+
+            },
+            touchend:function(e){
+                if((e.originalEvent.changedTouches[0].pageY-main.touch.StartY)<-30 && main.SwiperIndex==6){
+                    main.p1leave();
+                    main.pvideo();
+                    main.showBarrage();
+                    Barrage.updateBarrageContainerSize();
+                    Barrage.AddAllBarrageToContainer();
+                }
+            }
+        });
 
         /////////pvideo//////////
         $(".barrage-btn").on("touchend",function(){
@@ -955,6 +976,8 @@
 
         });
         $(".pv-btn").on("touchend",function(){
+            main.V.obj.pause();
+            main.V.isPlay = false;
             main.pvideoleave();
             main.precord();
         });
@@ -1045,12 +1068,12 @@
                 $(".analysisResult").html(main.translateResult);
             },5000);
         });//点击开始录音
-        $(".submit").on("touchend",function(){
+        $(".submit").on("touchend",function(){//提交按钮
             if(!main.analysisSuccess||(main.translateResult =="")){return;}//识别结果为空或者语音识别未成功，无法点击按钮
             Barrage.CreateOneBarrage({
                 text:main.translateResult,
                 delay:1,
-                color:"red",
+                color:"#940101",
             });
             Barrage.AddOneBarrageToContainer(Barrage.barrages[Barrage.barrages.length-1],Barrage.barrages.length-1)
             console.log("数据上保存一条弹幕内容，上传服务器");
@@ -1116,21 +1139,21 @@
         $(".pcdxx").on("touchend",function(){
             main.paddressleave();
         });
-        main.FindSelect.$provinceObj.on("change",function(){
+        main.FindSelect.$provinceObj.on("change",function(){//select选择省份
             main.FindSelect.provinceIndex = main.FindSelect.$provinceObj[0].selectedIndex;
             main.FindSelect.province = main.FindSelect.$provinceObj[0].options[main.FindSelect.provinceIndex].text;
             //更新视图
             main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
             main.FindSelect.contentBox.html(main.FindSelect.str);
         });
-        main.FindSelect.$cityObj.on("change",function(){
+        main.FindSelect.$cityObj.on("change",function(){//select选择城市
             main.FindSelect.cityIndex = main.FindSelect.$cityObj[0].selectedIndex;
             main.FindSelect.city = main.FindSelect.$cityObj[0].options[main.FindSelect.cityIndex].text;
             //更新视图
             main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
             main.FindSelect.contentBox.html(main.FindSelect.str);
         });
-        main.FindSelect.$addressObj.on("change",function(){
+        main.FindSelect.$addressObj.on("change",function(){//select选择门店
             main.FindSelect.addressIndex = main.FindSelect.$addressObj[0].selectedIndex;
             main.FindSelect.address = main.FindSelect.$addressObj[0].options[main.FindSelect.addressIndex].text;
             //更新视图
@@ -1140,7 +1163,7 @@
         /////////pchaxunDoor//////////
 
         /////////pfill//////////
-        $(".fill-btn").on("touchend",function(){
+        $(".fill-btn").on("touchend",function(){//提交个人信息
             var patt_phone = /^1(3|4|5|7|8)\d{9}$/;
             var name = $("#name").val();
             var number = $("#phone").val();
@@ -1245,7 +1268,7 @@
         });
         $(".P_share").on("touchend",function(){
             $(this).fo();
-        })
+        });
         $(window).on("orientationchange",function(e){
             if(window.orientation == 0 || window.orientation == 180 )
             {
@@ -1256,6 +1279,7 @@
                 $(".hp").delay(100).fadeIn();
             }
         });
+
     };
     main.scrollInit = function(selector,start){
         this.touch.ScrollObj = $(selector);
