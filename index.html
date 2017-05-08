@@ -21,6 +21,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="apple-touch-fullscreen" content="yes"/>
+
     <script>
         var css;
         css = '<'+'link '+'href='+"css/common.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
@@ -42,14 +43,15 @@
 </div>
 
 <div class="container P_bg">
-    <img src="images/bg.jpg" class="bg-pic">
+    <img data-src="images/bg.jpg" class="bg-pic lazy">
+    <img data-src="images/f.gif" class="bg-flower lazy">
 </div>
 
-<div class="container P_loading">
+<div class="container P_loading loadingColor">
     <div class="load-area">
         <img src="images/logo.png" class="load-logo">
-        <span class="num"></span>
-        <span class="infinite none">-<img src="images/loadgif.gif" class="">-</span>
+        <!--<span class="num"></span>-->
+        <span class="infinite">-<img src="images/loadgif.gif" class="">-</span>
     </div>
 </div>
 
@@ -58,80 +60,76 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="p1-page p1-page1">
-                    <img src="images/p1-1.jpg?v" class="p1-page-bg">
-                    <img src="images/p0-text-1.png" class="p1-page-txt">
+                    <img data-src="images/p1-1.jpg" class="p1-page-bg lazy">
+                    <img data-src="images/p0-text-1.png" class="p1-page-txt lazy">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page2">
-                    <img src="images/p1-2.jpg" class="p1-page-bg">
-                    <img src="images/p0-text-2.png" class="p1-page-txt">
+                    <img data-src="images/p1-2.jpg" class="p1-page-bg lazy">
+                    <img data-src="images/p0-text-2.png" class="p1-page-txt lazy">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page3">
-                    <img src="images/p1-3.jpg" class="p1-page-bg">
-                    <img src="images/p0-text-3.png" class="p1-page-txt">
+                    <img data-src="images/p1-3.jpg" class="p1-page-bg lazy">
+                    <img data-src="images/p0-text-3.png" class="p1-page-txt lazy">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page4">
-                    <img src="images/p1-4.jpg" class="p1-page-bg">
-                    <img src="images/p0-text-4.png" class="p1-page-txt">
+                    <img data-src="images/p1-4.jpg" class="p1-page-bg lazy">
+                    <img data-src="images/p0-text-4.png" class="p1-page-txt lazy">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page5">
-                    <img src="images/p1-5.jpg" class="p1-page-bg">
-                    <img src="images/p0-text-5.png" class="p1-page-txt">
+                    <img data-src="images/p1-5.jpg" class="p1-page-bg lazy">
+                    <img data-src="images/p0-text-5.png" class="p1-page-txt lazy">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page6">
-                    <img src="images/p1-6.jpg" class="p1-page-bg">
-                    <img src="images/p0-text-6.png" class="p1-page-txt">
+                    <img data-src="images/p1-6.jpg" class="p1-page-bg lazy">
+                    <img data-src="images/p0-text-6.png" class="p1-page-txt lazy">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p1-page p1-page7">
-                    <img src="images/p1-7.jpg" class="p1-page-bg">
-                    <img src="images/p0-text-7.png" class="p1-page-txt">
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div style="width:100%;height:100%;">
-
+                    <img data-src="images/p1-7.jpg" class="p1-page-bg lazy">
+                    <img data-src="images/p0-text-7.png" class="p1-page-txt lazy">
                 </div>
             </div>
         </div>
     </div>
+    <img data-src="images/jiantou.png" class="arraw ani-arrdown lazy">
 </div>
 
 <div class="container P_Video none">
 
-    <img src="images/p1-text-1.png" class="pv-title">
+    <img data-src="images/p1-text-1.png" class="pv-title lazy">
 
     <div class="videoBox">
-        <img src="images/p1-img-1.png" class="video-border">
+        <img data-src="images/p1-img-1.png" class="video-border lazy">
         <video src="video/video.mp4" id="video"  width="525" height="291" x-webkit-airplay="true" webkit-playsinline playsinline airplay="allow" x5-video-player-type="h5" class="iosPreload" poster="images/poster.png"></video>
-        <img src="images/vplayBtn.png?v1" class="play-btn">
+        <img data-src="images/vplayBtn.png?v1" class="play-btn lazy">
     </div>
 
-    <img src="images/p1-text-2.png" class="pv-txt">
-    <img src="images/p1-button-2.png" class="pv-btn">
+    <img data-src="images/p1-text-2.png" class="pv-txt lazy">
+    <img data-src="images/p1-button-2.png" class="pv-btn lazy">
 
     <div class="pv-bottom pv-bottom1 none">
-        <img src="images/p2_img_4.png" class="p1 rule-btn">
-        <img src="images/p2_img_5.png" class="p2">
-        <img src="images/p2_img_6.png" class="p3">
+        <img data-src="images/p2_img_4.png?v1" class="p1 rule-btn lazy">
+        <img data-src="images/p2_img_5.png" class="p2 lazy">
+        <img data-src="images/p2_img_6.png?v1" class="p3 lazy">
     </div>
     <div class="pv-bottom pv-bottom2 none">
-        <img src="images/p2_img_4.png" class="rule-btn">
+        <img data-src="images/p2_img_4.png?v1" class="rule-btn lazy">
     </div>
 </div>
 
 <div class="container P_record none">
-    <img src="images/p2-text-1.png" class="prec-title">
+    <img data-src="images/p2-text-1.png" class="prec-title lazy">
 
     <div class="recordBox">
         <p class="time one">
@@ -139,29 +137,29 @@
             ''
             <span class="ms">00</span>
         </p>
-        <img src="images/yinbo.png" class="bo1 bo1-bopng">
-        <img src="images/yinbo.gif" class="bo1 bo1-bogif none">
-        <img src="images/p2-button-1.png" class="icon1 icon1-start one">
-        <img src="images/p2-button-2.png" class="icon1 icon1-end two none">
+        <img data-src="images/yinbo.png" class="bo1 bo1-bopng lazy">
+        <img data-src="images/yinbo.gif" class="bo1 bo1-bogif none lazy">
+        <img data-src="images/p2-button-1.png" class="icon1 icon1-start one lazy">
+        <img data-src="images/p2-button-2.png" class="icon1 icon1-end two none lazy">
 
-        <img src="images/p2-text-2.png" class="btn-start one">
+        <img data-src="images/p2-text-2.png" class="btn-start one lazy">
 
         <div class="op-tip2 two none">
-            <img src="images/p2-button-3.png" class="btn-listen">
-            <img src="images/p2-button-4.png" class="btn-restart">
+            <img data-src="images/p2-button-3.png" class="btn-listen lazy">
+            <img data-src="images/p2-button-4.png" class="btn-restart lazy">
         </div>
     </div>
 
-    <img src="images/p2-text-3.png" class="record-txt">
+    <img data-src="images/p2-text-3.png" class="record-txt lazy">
 
     <div class="analysisBox">
         <div class="analysisResult theme_color"></div>
-        <img src="images/p2-button-7.png" class="submit ui-chrome-btn-disable">
+        <img data-src="images/p2-button-7.png" class="submit ui-chrome-btn-disable lazy">
     </div>
 
     <div class="ui-btnGroup prec-btnGroup none">
-        <img src="images/p2-button-5.png" class="btn1">
-        <img src="images/p2-button-6.png" class="btn2">
+        <img data-src="images/p2-button-5.png" class="btn1 lazy">
+        <img data-src="images/p2-button-6.png" class="btn2 lazy">
     </div>
 
     <!--<img src="images/p2-button-5.png" class="prec-prizeBtn none">-->
@@ -169,95 +167,95 @@
 </div>
 
 <div class="container P_prize_result none">
-    <img src="images/prztitle.png" class="prz-title">
+    <img data-src="images/prztitle.png" class="prz-title opacity delay02 ani-fadeIn lazy">
 
     <!--88-->
     <div class="ui-prizeBox prizeBox1 none">
         <div class="prizeType1">
-            <img src="images/p3-img-5.png" class="ui-env1">
-            <img src="images/p3-img-4.png" class="ui-env2">
-            <img src="images/p3-img-1.png" class="ui-quan">
-            <img src="images/p3-img-6.png" class="ui-flower1">
+            <img data-src="images/p3-img-5.png" class="opacity ui-env1 ani-rotateN delay05 lazy">
+            <img data-src="images/p3-img-4.png" class="opacity ui-env2 ani-rotateS delay05 lazy">
+            <img data-src="images/p3-img-1.png" class="opacity ui-quan ani-rotateN delay05 lazy">
+            <img data-src="images/p3-img-6.png" class="opacity ani-toBig2 ui-flower1 delay05 lazy">
         </div>
-        <img src="images/p3-text-1.png" class="prize-txt">
+        <img src="images/p3-text-1.png" class="prize-txt lazy">
     </div>
 
     <!--188-->
     <div class="ui-prizeBox prizeBox2 none">
         <div class="prizeType1">
-            <img src="images/p3-img-5.png" class="ui-env1">
-            <img src="images/p3-img-4.png" class="ui-env2">
-            <img src="images/p3-img-2.png" class="ui-quan">
-            <img src="images/p3-img-6.png" class="ui-flower1">
+            <img data-src="images/p3-img-5.png" class="opacity ui-env1 ani-rotateN delay05 lazy">
+            <img data-src="images/p3-img-4.png" class="opacity ui-env2 ani-rotateS delay05 lazy">
+            <img data-src="images/p3-img-2.png" class="opacity ui-quan ani-rotateN delay05 lazy">
+            <img data-src="images/p3-img-6.png" class="opacity ani-toBig2 ui-flower1 delay05 lazy">
         </div>
-        <img src="images/p3-text-2.png" class="prize-txt">
+        <img data-src="images/p3-text-2.png" class="prize-txt lazy">
     </div>
 
     <!--520-->
     <div class="ui-prizeBox prizeBox3 none">
         <div class="prizeType1">
-            <img src="images/p3-img-5.png" class="ui-env1">
-            <img src="images/p3-img-4.png" class="ui-env2">
-            <img src="images/p3-img-3.png" class="ui-quan">
-            <img src="images/p3-img-6.png" class="ui-flower1">
+            <img data-src="images/p3-img-5.png" class="opacity ui-env1 ani-rotateN delay05 lazy">
+            <img data-src="images/p3-img-4.png" class="opacity ui-env2 ani-rotateS delay05 lazy">
+            <img data-src="images/p3-img-3.png" class="opacity ui-quan ani-rotateN delay05 lazy">
+            <img data-src="images/p3-img-6.png" class="opacity ani-toBig2 ui-flower1 delay05 lazy">
         </div>
-        <img src="images/p3-text-3.png" class="prize-txt">
+        <img data-src="images/p3-text-3.png" class="prize-txt lazy">
     </div>
 
     <!--矿泉水-->
     <div class="ui-prizeBox prizeBox4 none">
         <div class="prizeType2">
-            <img src="images/p3-img-8.png" class="notquan">
-            <img src="images/p3-img-7.png" class="ui-flower2">
+            <img data-src="images/p3-img-8.png" class="notquan opacity delay05 ani-fadeIn lazy">
+            <img data-src="images/p3-img-7.png" class="opacity ui-flower2 ani-toBig1 delay05 lazy">
         </div>
-        <img src="images/p3-text-4.png" class="prize-txt">
+        <img data-src="images/p3-text-4.png" class="prize-txt lazy">
     </div>
 
     <!--木头-->
     <div class="ui-prizeBox prizeBox5 none">
         <div class="prizeType2">
-            <img src="images/p3-img-9.png" class="notquan">
-            <img src="images/p3-img-7.png" class="ui-flower2">
+            <img data-src="images/p3-img-9.png" class="notquan opacity delay05 ani-fadeIn lazy">
+            <img data-src="images/p3-img-7.png" class="opacity ani-toBig1  ui-flower2 delay05 lazy">
         </div>
-        <img src="images/p3-text-5.png" class="prize-txt">
+        <img data-src="images/p3-text-5.png" class="prize-txt lazy">
     </div>
 
     <!--券按钮组-->
-    <div class="ui-btnGroup prz-btnGroup1 none">
-        <img src="images/p3-button-1.png" class="btn1">
-        <img src="images/p3-button-2.png" class="btn2">
+    <div class="ui-btnGroup prz-btnGroup1 opacity delay08 ani-fadeIn none">
+        <img data-src="images/p3-button-1.png" class="btn1 lazy">
+        <img data-src="images/p3-button-2.png" class="btn2 lazy">
     </div>
     <!--实物按钮组-->
-    <div class="ui-btnGroup prz-btnGroup2 none">
-        <img src="images/fillBtn.png" class="btn1">
-        <img src="images/p3-button-2.png" class="btn2">
+    <div class="ui-btnGroup prz-btnGroup2 opacity delay08 ani-fadeIn none">
+        <img data-src="images/fillBtn.png" class="btn1 lazy">
+        <img data-src="images/p3-button-2.png" class="btn2 lazy">
     </div>
 
 </div>
 
 <div class="container P_chaxun none">
-    <img src="images/p5-text-1.png" class="pcx-title">
+    <img data-src="images/p5-text-1.png" class="pcx-title lazy">
 
     <!--88-->
     <div class="ui-chaxunBox chaxunBox1 none">
-        <img src="images/p5-img-1.png" class="cxpic cxpic1">
+        <img data-src="images/p5-img-1.png" class="cxpic cxpic1 lazy">
     </div>
 
     <!--188-->
     <div class="ui-chaxunBox chaxunBox2 none">
-        <img src="images/p5-img-2.png" class="cxpic cxpic1">
+        <img data-src="images/p5-img-2.png" class="cxpic cxpic1 lazy">
     </div>
 
     <!--520-->
     <div class="ui-chaxunBox chaxunBox3 none">
-        <img src="images/p5-img-3.png" class="cxpic cxpic1">
+        <img data-src="images/p5-img-3.png" class="cxpic cxpic1 lazy">
     </div>
 
     <!--矿泉水-->
     <div class="ui-chaxunBox chaxunBox4 none">
-        <img src="images/p5-img-4.png" class="cxpic cxpic2">
+        <img data-src="images/p5-img-4.png" class="cxpic cxpic2 lazy">
         <p class="add_info">
-            <img src="images/text.png" class="txt">
+            <img data-src="images/text.png" class="txt lazy">
             &nbsp&nbsp
             <span class="province">浙江省</span>
             &nbsp&nbsp
@@ -269,9 +267,9 @@
 
     <!--木头-->
     <div class="ui-chaxunBox chaxunBox5 none">
-        <img src="images/p5-img-5.png" class="cxpic cxpic3">
+        <img data-src="images/p5-img-5.png" class="cxpic cxpic3 lazy">
         <p class="add_info">
-            <img src="images/text.png" class="txt">
+            <img data-src="images/text.png" class="txt lazy">
             &nbsp&nbsp
             <span class="province">浙江省</span>
             &nbsp&nbsp
@@ -283,23 +281,23 @@
 
     <!--券按钮组-->
     <div class="ui-btnGroup chaxun-btnGroup1 none">
-        <img src="images/p3-button-1.png" class="btn1">
-        <img src="images/p3-button-2.png" class="btn2">
+        <img data-src="images/p3-button-1.png" class="btn1 lazy">
+        <img data-src="images/p3-button-2.png" class="btn2 lazy">
     </div>
 
     <!--实物按钮组-->
     <div class="ui-btnGroup chaxun-btnGroup2 none">
-        <img src="images/p3-button-2.png" class="btn2">
+        <img data-src="images/p3-button-2.png" class="btn2 lazy">
     </div>
 
-    <img src="images/esc.png" class="pcxxx"><!--关闭-->
+    <img data-src="images/esc.png" class="pcxxx lazy"><!--关闭-->
 
 </div><!--查询结果页-->
 
 <div class="container P_chaxunDoor none">
     <div class="pcdBox">
         <div class="pcdxx"></div>
-        <img src="images/p6-img-1.png" class="pcd-bg">
+        <img data-src="images/p6-img-1.png" class="pcd-bg lazy">
         <div class="ui-selectBox selectBox2">
             <select class="addDataProvince ui-select select1">
                 <option>领取省份</option>
@@ -320,7 +318,7 @@
 
 <div class="container P_fill none">
     <div class="fillBox black">
-        <img src="images/p4-img-1.png" class="fill-bg">
+        <img data-src="images/p4-img-1.png" class="fill-bg lazy">
 
         <div class="infoBox">
             <input id="name" class="input name-input" placeholder="姓名">
@@ -341,8 +339,8 @@
                 <option>嘉兴八佰伴店</option>
             </select>
         </div>
-        <img src="images/p4-text-1.png" class="fill-txt">
-        <img src="images/p4-button-1.png" class="fill-btn">
+        <img data-src="images/p4-text-1.png" class="fill-txt lazy">
+        <img data-src="images/p4-button-1.png" class="fill-btn lazy">
 
     </div>
 </div>
@@ -357,7 +355,7 @@
             <p class="content">这是一条弹幕信息</p>
         </div>
         <div class="close">
-            <img src="images/close.png">
+            <!--<img src="images/close.png">-->
         </div>
     </div>
 </div>
@@ -365,47 +363,47 @@
 <div class="container P_rule none">
     <div class="ruleBox">
         <div class="rulexx"></div>
-        <img src="images/p11-img-1.png" class="rule-bg">
+        <img data-src="images/p11-img-1.png" class="rule-bg lazy">
         <div class="rule_scrollArea">
-            <img src="images/p11-text-1.png" class="rule-txt">
+            <img data-src="images/p11-text-1.png" class="rule-txt lazy">
         </div>
-        <img src="images/jiantou.png" class="arraw ani-arraw">
+        <img data-src="images/jiantou.png" class="arraw ani-arraw lazy">
     </div>
 </div>
 
 <div class="container P_share none">
-    <img src="images/fenxiang.png" class="share-pic">
+    <img data-src="images/fenxiang.png" class="share-pic lazy">
 </div>
 
 <div class="container P_code none">
-    <img src="images/p10.jpg" style="top:0;left:0;" class="lazy">
+    <img data-src="images/p10.jpg" style="top:0;left:0;" class="lazy">
 </div><!--二维码-->
 
 <div class="container P_end1 none"><!--参与过-->
-    <img src="images/p9.jpg" style="top:0;left:0;" class="lazy">
-    <img src="images/p9-button.png" class="pend-btn">
+    <img data-src="images/p9.jpg" style="top:0;left:0;" class="lazy">
+    <img data-src="images/p9-button.png" class="pend-btn lazy">
 </div>
 
 <div class="container P_end2 none"><!--未参与过-->
-    <img src="images/p8.jpg" style="top:0;left:0;" class="lazy">
+    <img data-src="images/p8.jpg" style="top:0;left:0;" class="lazy">
 </div>
 
 <div class="container P_alert none">
     <div class="ui-alertBox alertBox1 none"><!--单行-->
-        <img src="images/esc-1.png" class="alertxx">
-        <img src="images/text-1.png" class="alerttip"><!--友情提示-->
+        <img data-src="images/esc-1.png" class="alertxx lazy">
+        <img data-src="images/text-1.png" class="alerttip lazy"><!--友情提示-->
         <p class="alert-txt theme_color"></p>
 
-        <img src="images/button-3.png" class="alertbtn alertbtn1 none"><!--立即填写-->
+        <img data-src="images/button-3.png" class="alertbtn alertbtn1 none lazy"><!--立即填写-->
         <!--<img src="images/" class="alertbtn alertbtn3">-->
     </div>
 
     <div class="ui-alertBox alertBox2 none"><!--多行-->
         <!--<img src="images/esc-1.png" class="alertxx">-->
-        <img src="images/text-1.png" class="alerttip">
+        <img data-src="images/text-1.png" class="alerttip lazy">
         <p class="alert-txt theme_color"></p>
 
-        <img src="images/button-1.png" class="alertbtn alertbtn1 none"><!--填写领奖信息-->
+        <img data-src="images/button-1.png" class="alertbtn alertbtn1 none lazy"><!--填写领奖信息-->
     </div>
 
     <div class="ui-alertBox alertBox3 like-table none"><!--多行-->
@@ -414,7 +412,7 @@
 
         </p>
 
-        <img src="images/button-2.png" class="alertbtn alertbtn1 none"><!--前往注册-->
+        <img data-src="images/button-2.png" class="alertbtn alertbtn1 none lazy"><!--前往注册-->
 
     </div>
 </div>
