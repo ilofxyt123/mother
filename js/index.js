@@ -566,7 +566,7 @@
         ];
 
         this.Swiper = undefined;
-        this.SwiperIndex = undefined;
+        this.SwiperIndex = 1;
 
         /*录音数据*/
         this.isRecording = false;//正在录音标志
@@ -597,14 +597,14 @@
         ///////////////////套后台后可删除///////////////////
 
         ///////////////Swiper初始化///////////////
-        this.Swiper = new Swiper(".P1 .swiper-container",{
-            direction : 'vertical',//纵向
-            resistanceRatio : 0,//边缘抵抗
-            allowSwipeToPrev:false,
-            onSlideChangeEnd: function(swiper){
-                main.SwiperIndex = swiper.activeIndex;
-            }
-        });
+        // this.Swiper = new Swiper(".P1 .swiper-container",{
+        //     direction : 'vertical',//纵向
+        //     resistanceRatio : 0,//边缘抵抗
+        //     allowSwipeToPrev:false,
+        //     onSlideChangeEnd: function(swiper){
+        //         main.SwiperIndex = swiper.activeIndex;
+        //     }
+        // });
         ///////////////Swiper初始化///////////////
 
         ///////////////弹幕处理///////////////
@@ -673,7 +673,7 @@
     };
     main.p1 = function(){
         $(".P1").fi();
-        this.Swiper.update();
+        // this.Swiper.update();
     };
     main.p1leave = function(){
         $(".P1").fo();
@@ -922,12 +922,27 @@
 
             },
             touchend:function(e){
-                if((e.originalEvent.changedTouches[0].pageY-main.touch.StartY)<-30 && main.SwiperIndex==6){
-                    main.p1leave();
-                    main.pvideo();
-                    main.showBarrage();
-                    Barrage.updateBarrageContainerSize();
-                    Barrage.AddAllBarrageToContainer();
+                if((e.originalEvent.changedTouches[0].pageY-main.touch.StartY)<-30){//手指向上滑动
+                    if(main.SwiperIndex<6){
+                        $(".p1-page"+main.SwiperIndex).fo();
+                        main.SwiperIndex += 1;
+                        $(".p1-page"+main.SwiperIndex).fi(function(){
+                            $(".p1-page"+main.SwiperIndex).removeClass("scale12")
+                        })
+                    }
+                    else{
+                        main.p1leave();
+                        main.pvideo();
+                        main.showBarrage();
+                        Barrage.updateBarrageContainerSize();
+                        Barrage.AddAllBarrageToContainer();
+                    }
+
+                    // main.p1leave();
+                    // main.pvideo();
+                    // main.showBarrage();
+                    // Barrage.updateBarrageContainerSize();
+                    // Barrage.AddAllBarrageToContainer();
                 }
             }
         });
