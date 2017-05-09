@@ -737,7 +737,6 @@
         $(".analysisResult").html("");
         $(".submit").addClass("ui-chrome-btn-disable");
 
-        $(".btn-tryListen").addClass("none");
         $(".record-txt1").addClass("none");
         $(".record-txt2").addClass("none");
 
@@ -1136,7 +1135,6 @@
             $(".record-txt2").fi();
 
             $(".op-tip2").fo();
-            $(".btn-tryListen").fi();
 
             $(".analysisBox").fo();
             $(".prec-btnGroup").fi();
