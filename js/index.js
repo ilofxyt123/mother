@@ -732,14 +732,20 @@
         $(".two").addClass("none");
         $(".prec-btnGroup").addClass("none");
 
+
         $(".analysisBox").removeClass("none");
         $(".analysisResult").html("");
         $(".submit").addClass("ui-chrome-btn-disable");
+
+        $(".btn-tryListen").addClass("none");
+        $(".record-txt1").addClass("none");
+        $(".record-txt2").addClass("none");
 
         main.analysisSuccess = false;//语音识别标示为false
         main.translateResult = "";
     };
     main.precord = function(){
+        $(".record-txt1").removeClass("none");
         $(".P_record").fi();
     };
     main.precordleave = function(){
@@ -1126,11 +1132,16 @@
                 $(".prec-btnGroup .btn1").remove();
             }//抽过奖的移除按钮
 
+            $(".record-txt1").fo();
+            $(".record-txt2").fi();
+
             $(".op-tip2").fo();
+            $(".btn-tryListen").fi();
+
             $(".analysisBox").fo();
             $(".prec-btnGroup").fi();
         });//提交识别结果，制作弹幕，上传识别文字结果+语音
-        $(".btn-listen").on("touchend",function(){
+        $(".btn-listen,.icon1-end").on("touchend",function(){
             if(!main.isRecording){
                 main.playRecord(main.localID);
             }

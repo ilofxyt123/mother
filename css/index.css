@@ -92,6 +92,7 @@ img{position: absolute;}
             .op-tip2{position:absolute;bottom:0;width:300px;height:34px;left:50%;margin-left:-150px;}
                 .btn-listen{left:0;}
                 .btn-restart{right:0;}
+            .btn-tryListen{position:absolute;bottom:0;left:50%;margin-left:-33px;}
         .record-txt{top:676px;left:50%;margin-left:-194px;}
         .analysisBox{width:492px;height:96px;position: absolute;left:50%;margin-left:-246px;top:840px;}
             .analysisResult{width:377px;height:96px;line-height:96px;background-image:url("../images/p2-img-1.png");background-repeat: no-repeat;left:0;top:0;font-size:26px;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;padding-left:20px;}
