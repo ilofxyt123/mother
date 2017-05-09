@@ -126,6 +126,7 @@ img{position: absolute;}
         .cxpic{position:relative;margin:0 auto;}
         .cxpic1{left:-20px;}
         .cxpic2{}
+        .cxpic-flower{left:50%;top:80px;margin-left:-175px;z-index:-1;}
         .cxpic3{}
         p.add_info{height:30px;line-height:30px;text-align:center;margin-top:50px;color:#535353;}
         img.txt{position: static;display: inline-block;vertical-align:middle;}

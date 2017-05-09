@@ -266,7 +266,7 @@
     }
     100% {
         -webkit-transform:scale(1);
-        -webkit-transform-origin:right bottom;
+        -webkit-transform-origin:center bottom;
         opacity: 1;
     }
 }
@@ -278,7 +278,7 @@
     }
     100% {
         transform:scale(1);
-        transform-origin:right bottom;
+        transform-origin:center bottom;
         opacity: 1;
     }
 }
