@@ -202,6 +202,7 @@
         this.barrages = [];//所有的弹幕
         this.upload="";//用于上传的新弹幕
         this.downloadArr = [];
+        this.testArr = ["妈妈，我爱你","妈妈辛苦了","母亲节快乐"];
         this.isOpen = false;
     };
     Barrage.CreateOneBarrage = function(config){
@@ -312,9 +313,9 @@
 
     };//往弹幕容器中增加一条弹幕
     Barrage.AddAllBarrageToContainer = function(){
-        for(var i=0;i<this.barrages.length;i++){
-            this.AddOneBarrageToContainer(this.barrages[i],i);//往容器中增加一条弹幕
-        }
+            for(var i=0;i<this.barrages.length;i++){
+                this.AddOneBarrageToContainer(this.barrages[i],i);//往容器中增加一条弹幕
+            }
     };
     Barrage.setBarrageLoop = function(){
         var callBack = function(){
@@ -444,11 +445,25 @@
             $addressObj:$(".selectBox1 .select2"),
             str:""
         };
+        this.CommonSelect = {
+            provinceIndex:"0",
+            cityIndex:"0",
+            addressIndex:"",
+            province:"",
+            city:"",
+            address:"",
+            $provinceObj:$(".addDataProvince"),
+            $cityObj:$(".addDataCity"),
+            $addressObj:$(".addDataAddress"),
+            str:"",
+            contentBox:$(".pcd-result")
+        };
         this.alertTxt = {
             name:"请填写领奖人的姓名",
             phoneEmpty:"请填写正确的手机号",
             door:"请选择领取的门店",
-            reg:"为了确保领奖者的真实性，系统需要进行实名认证，请填写个人真实信息领取奖品！"
+            reg:"为了确保领奖者的真实性，系统需要进行实名认证，请填写个人真实信息领取奖品！",
+            gofill:"你还未填写领奖信息，赶快去填写吧"
         };
 
         this.bgm ={
@@ -660,6 +675,14 @@
                 main.precord();
                 return;
             }
+            if(main.FromTuiSong){
+                main.top();
+                main.showBarrage();
+                Barrage.updateBarrageContainerSize();
+                Barrage.AddAllBarrageToContainer();
+                main.pchaxun();
+                return;
+            }
             main.top();
             main.p1();
             ///////////////活动未结束///////////////
@@ -762,7 +785,11 @@
     main.pchaxun = function(){
         if(this.prizeType == 4 || this.prizeType == 5){//实物奖
             if(!this.haveFill){
-
+                main.alert({
+                    text:main.alertTxt.gofill,
+                    type:2,
+                    button:".alertbtn1"
+                });
                 return;
             }
         }
@@ -889,12 +916,12 @@
     };
     main.initBarrage = function(){
         // Barrage.downloadArr = getDanMu();
-
-
-        for(var i=0;i<50;i++){
-            Barrage.CreateOneBarrage({
-
-            })
+        if(Barrage.downloadArr.length == 0){
+            for(var i=0;i<Barrage.testArr.length;i++){
+                Barrage.CreateOneBarrage({
+                    text:Barrage.testArr[i]
+                })
+            }
         }
     };
     main.showBarrage = function(){
@@ -927,7 +954,7 @@
                         $(".p1-page"+main.SwiperIndex).fo();
                         main.SwiperIndex += 1;
                         $(".p1-page"+main.SwiperIndex).fi(function(){
-                            $(".p1-page"+main.SwiperIndex).removeClass("scale12")
+                            $(".p1-page"+main.SwiperIndex).children(".p1-page-bg").removeClass("scale12")
                         })
                     }
                     else{
@@ -1154,26 +1181,48 @@
         $(".pcdxx").on("touchend",function(){
             main.paddressleave();
         });
-        main.FindSelect.$provinceObj.on("change",function(){//select选择省份
-            main.FindSelect.provinceIndex = main.FindSelect.$provinceObj[0].selectedIndex;
-            main.FindSelect.province = main.FindSelect.$provinceObj[0].options[main.FindSelect.provinceIndex].text;
+        // main.FindSelect.$provinceObj.on("change",function(){//select选择省份
+        //     main.FindSelect.provinceIndex = main.FindSelect.$provinceObj[0].selectedIndex;
+        //     main.FindSelect.province = main.FindSelect.$provinceObj[0].options[main.FindSelect.provinceIndex].text;
+        //     //更新视图
+        //     main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
+        //     main.FindSelect.contentBox.html(main.FindSelect.str);
+        // });
+        // main.FindSelect.$cityObj.on("change",function(){//select选择城市
+        //     main.FindSelect.cityIndex = main.FindSelect.$cityObj[0].selectedIndex;
+        //     main.FindSelect.city = main.FindSelect.$cityObj[0].options[main.FindSelect.cityIndex].text;
+        //     //更新视图
+        //     main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
+        //     main.FindSelect.contentBox.html(main.FindSelect.str);
+        // });
+        // main.FindSelect.$addressObj.on("change",function(){//select选择门店
+        //     main.FindSelect.addressIndex = main.FindSelect.$addressObj[0].selectedIndex;
+        //     main.FindSelect.address = main.FindSelect.$addressObj[0].options[main.FindSelect.addressIndex].text;
+        //     //更新视图
+        //     main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
+        //     main.FindSelect.contentBox.html(main.FindSelect.str);
+        // });
+
+        main.CommonSelect.$provinceObj.on("change",function(){//select选择省份
+            main.CommonSelect.provinceIndex = $(this)[0].selectedIndex;
+            main.CommonSelect.province = $(this)[0].options[main.CommonSelect.provinceIndex].text;
             //更新视图
-            main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
-            main.FindSelect.contentBox.html(main.FindSelect.str);
+            main.CommonSelect.str = main.CommonSelect.province + main.CommonSelect.city + main.CommonSelect.address;
+            main.CommonSelect.contentBox.html(main.CommonSelect.str);
         });
-        main.FindSelect.$cityObj.on("change",function(){//select选择城市
-            main.FindSelect.cityIndex = main.FindSelect.$cityObj[0].selectedIndex;
-            main.FindSelect.city = main.FindSelect.$cityObj[0].options[main.FindSelect.cityIndex].text;
+        main.CommonSelect.$cityObj.on("change",function(){//select选择城市
+            main.CommonSelect.cityIndex = $(this)[0].selectedIndex;
+            main.CommonSelect.city = $(this)[0].options[main.CommonSelect.cityIndex].text;
             //更新视图
-            main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
-            main.FindSelect.contentBox.html(main.FindSelect.str);
+            main.CommonSelect.str = main.CommonSelect.province + main.CommonSelect.city + main.CommonSelect.address;
+            main.CommonSelect.contentBox.html(main.CommonSelect.str);
         });
-        main.FindSelect.$addressObj.on("change",function(){//select选择门店
-            main.FindSelect.addressIndex = main.FindSelect.$addressObj[0].selectedIndex;
-            main.FindSelect.address = main.FindSelect.$addressObj[0].options[main.FindSelect.addressIndex].text;
+        main.CommonSelect.$addressObj.on("change",function(){//select选择门店
+            main.CommonSelect.addressIndex = $(this)[0].selectedIndex;
+            main.CommonSelect.address = $(this)[0].options[main.CommonSelect.addressIndex].text;
             //更新视图
-            main.FindSelect.str = main.FindSelect.province + main.FindSelect.city + main.FindSelect.address;
-            main.FindSelect.contentBox.html(main.FindSelect.str);
+            main.CommonSelect.str = main.CommonSelect.province + main.CommonSelect.city + main.CommonSelect.address;
+            main.CommonSelect.contentBox.html(main.CommonSelect.str);
         });
         /////////pchaxunDoor//////////
 
@@ -1217,18 +1266,18 @@
                 this.value=this.value.replace(/\D/g,'')
             }
         });
-        main.FillSelect.$provinceObj.on("change",function(){
-            main.FillSelect.provinceIndex = main.FillSelect.$provinceObj[0].selectedIndex;
-            main.FillSelect.province = main.FillSelect.$provinceObj[0].options[main.FillSelect.provinceIndex].text;
-        });
-        main.FillSelect.$cityObj.on("change",function(){
-            main.FillSelect.cityIndex = main.FillSelect.$cityObj[0].selectedIndex;
-            main.FillSelect.city = main.FillSelect.$cityObj[0].options[main.FillSelect.cityIndex].text;
-        });
-        main.FillSelect.$addressObj.on("change",function(){
-            main.FillSelect.addressIndex = main.FillSelect.$addressObj[0].selectedIndex;
-            main.FillSelect.address = main.FillSelect.$addressObj[0].options[main.FillSelect.addressIndex].text;
-        });
+        // main.FillSelect.$provinceObj.on("change",function(){
+        //     main.FillSelect.provinceIndex = main.FillSelect.$provinceObj[0].selectedIndex;
+        //     main.FillSelect.province = main.FillSelect.$provinceObj[0].options[main.FillSelect.provinceIndex].text;
+        // });
+        // main.FillSelect.$cityObj.on("change",function(){
+        //     main.FillSelect.cityIndex = main.FillSelect.$cityObj[0].selectedIndex;
+        //     main.FillSelect.city = main.FillSelect.$cityObj[0].options[main.FillSelect.cityIndex].text;
+        // });
+        // main.FillSelect.$addressObj.on("change",function(){
+        //     main.FillSelect.addressIndex = main.FillSelect.$addressObj[0].selectedIndex;
+        //     main.FillSelect.address = main.FillSelect.$addressObj[0].options[main.FillSelect.addressIndex].text;
+        // });
         /////////pfill//////////
 
         /////////pchaxun//////////
@@ -1265,12 +1314,19 @@
             main.alertClose();
             return false;
         });
+        $(".alertBox2 .alertbtn1").on("touchend",function(e){//立即填写
+            e.stopPropagation();
+            main.alertClose();
+            main.pfill()
+            return false;
+        });
         $(".alertBox3 .alertbtn1").on("touchend",function(e){//前往注册
             e.stopPropagation();
             main.alertClose();
             window.location.href = "index.html";
             return false;
         });
+
         /////////palert//////////
 
         $(".music-btn ").on("touchend",function(){
