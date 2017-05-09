@@ -404,7 +404,8 @@
         this.router;//管理页面跳转
         this.pages = {
             pvideo:"pvideo",
-            pend1:"pend1"
+            pend1:"pend1",
+            p1:"p1"
         };//需要被记录的页面
 
         this.touch ={
@@ -681,6 +682,7 @@
                 Barrage.updateBarrageContainerSize();
                 Barrage.AddAllBarrageToContainer();
                 main.pchaxun();
+                main.router = main.pages.p1;
                 return;
             }
             main.top();
@@ -1369,6 +1371,9 @@
               break;
           case "pend1":
               main.pend1();
+              break;
+          case "p1":
+              main.p1();
               break;
           default:
               main.pvideo();

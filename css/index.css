@@ -1,11 +1,4 @@
-html,body{
-    width:640px;
-    height:100%;
-    overflow: hidden;
-    position: relative;
-    margin:0 auto;
-    background-color:white;
-}
+
 img{position: absolute;}
 
 .hp{
