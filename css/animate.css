@@ -385,3 +385,35 @@
     -o-animation:ani-rotateN 0.8s ease-out 0s 1 normal forwards;
     animation:ani-rotateN 0.8s ease-out 0s 1 normal forwards;
 }
+
+@-webkit-keyframes ani-line {
+    0%{
+        width:0;
+        margin-left:0;
+        opacity: 0;
+    }
+    100% {
+        width:186px;
+        margin-left:-93px;
+        opacity: 1;
+    }
+}
+@keyframes ani-line {
+    0%{
+        width:0;
+        margin-left:0;
+        opacity: 0;
+    }
+    100% {
+        width:186px;
+        margin-left:-93px;
+        opacity: 1;
+    }
+}
+
+.ani-line {
+    -webkit-animation:ani-line 0.8s ease-out 0s 1 normal forwards;
+    -moz-animation:ani-line 0.8s ease-out 0s 1 normal forwards;
+    -o-animation:ani-line 0.8s ease-out 0s 1 normal forwards;
+    animation:ani-line 0.8s ease-out 0s 1 normal forwards;
+}
