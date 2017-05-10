@@ -667,20 +667,21 @@
                 Barrage.updateBarrageContainerSize();
                 Barrage.AddAllBarrageToContainer();
 
-                $(".analysisBox").addClass("none");
-                $(".time").addClass("none");
-                $(".one").addClass("none");
-                $(".op-tip2").addClass("none");
-                $(".prec-btnGroup").removeClass("none");
-                $(".icon1-end").removeClass("none");
-                main.precord();
+                // $(".analysisBox").addClass("none");
+                // $(".time").addClass("none");
+                // $(".one").addClass("none");
+                // $(".op-tip2").addClass("none");
+                // $(".prec-btnGroup").removeClass("none");
+                // $(".icon1-end").removeClass("none");
+                // main.precord();
+                main.prize();//抽奖
+
+                // main.precordleave();
+                main.pprize();
                 return;
             }
             if(main.FromTuiSong){
                 main.top();
-                main.showBarrage();
-                Barrage.updateBarrageContainerSize();
-                Barrage.AddAllBarrageToContainer();
                 main.pchaxun();
                 main.router = main.pages.p1;
                 return;
@@ -697,6 +698,7 @@
         $(".P_loading").fo();
     };
     main.p1 = function(){
+        $(".top .logo").addClass("none");
         $(".P1").fi();
         // this.Swiper.update();
     };
@@ -848,7 +850,8 @@
                 $(".bo1-bopng").removeClass("none");
                 $(".bo1-bogif").addClass("none");
                 $(".one").fo();
-                $(".two").fi();
+                $(".icon1-end").fi();
+                $(".op-tip2").fi();
             },
             fail: function (res) {
                 alert("录制是失败");
@@ -965,6 +968,7 @@
                         })
                     }
                     else{
+                        $(".top .logo").removeClass("none");
                         main.p1leave();
                         main.pvideo();
                         main.showBarrage();
@@ -1068,7 +1072,7 @@
         $(".icon1-start,.btn-start").on("touchend",function(){
             if(main.isRecording){return;};
             main.isRecording = true;
-
+            document.getElementById("start_msc").play();
             Timer.init({
                sec:5,
                 ms:0,
@@ -1108,7 +1112,8 @@
                 $(".bo1-bopng").removeClass("none");
                 $(".bo1-bogif").addClass("none");
                 $(".one").fo();
-                $(".two").fi();
+                $(".icon1-end").fi();
+                $(".op-tip2").fi();
 
                 /*语音识别成功回调*/
                 $(".submit").removeClass("ui-chrome-btn-disable");
