@@ -772,8 +772,8 @@
         // this.prizeType = 1;//88
         // this.prizeType = 2;//188
         // this.prizeType = 3;//520
-        this.prizeType = 4;//矿泉水
-        // this.prizeType = 5;//木头
+        // this.prizeType = 4;//矿泉水
+        this.prizeType = 5;//木头
     };//抽奖函数
     main.pprize = function(){
         $(".prizeBox"+this.prizeType).removeClass("none");

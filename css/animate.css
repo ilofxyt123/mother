@@ -239,14 +239,14 @@
 
 @keyframes ani-arrdown {
     100%{
-        transform:translateY(30px);
+        transform:translateY(-30px);
         opacity:0;
     }
 }
 
 @-webkit-keyframes ani-arrdown {
     100%{
-        -webkit-transform:translateY(30px);
+        -webkit-transform:translateY(-30px);
         opacity:0;
     }
 }
