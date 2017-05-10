@@ -166,7 +166,7 @@ img{position: absolute;}
     .ruleBox{width:538px;height:881px;position: absolute;left:50%;margin-left:-269px;top:90px;}
         .rulexx{position:absolute;width:40px;height:40px;right:26px;top:26px;}
         .rule-bg{z-index:-1;}
-        .rule_scrollArea{position: absolute;width:424px;height:670px;left:50%;margin-left:-212px;top:120px;overflow:hidden;}
+        .rule_scrollArea{position: absolute;width:450px;height:670px;left:50%;margin-left:-225px;top:120px;overflow:hidden;}
             .rule-txt{transition:transform 0.2s ease-out;}
         .P_rule .arraw{left:50%;margin-left:-27px;top:810px;}
 
