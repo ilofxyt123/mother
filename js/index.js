@@ -709,11 +709,11 @@
         $(".top").removeClass("none");
     };
     main.loadleave = function(){
-        $(".P_loading").fo();
+        $(".P_loading").fo(1000);
     };
     main.p1 = function(){
         $(".top .logo").addClass("none");
-        $(".P1").fi();
+        $(".P1").fi(1000);
         // this.Swiper.update();
     };
     main.p1leave = function(){
@@ -971,8 +971,11 @@
                         $(".p1-page"+main.SwiperIndex).fo();
                         main.SwiperIndex += 1;
                         $(".p1-page"+main.SwiperIndex).fi(function(){
-                            $(".p1-page"+main.SwiperIndex).children(".p1-page-bg").removeClass("scale12")
-                        })
+                            // $(".p1-page"+main.SwiperIndex).children(".p1-page-bg").removeClass("scale12")
+                        });
+                        setTimeout(function(){
+                            $(".p1-page"+main.SwiperIndex).children(".p1-page-bg").removeClass("scale12");
+                        },200)
                     }
                     else{
                         $(".top .logo").removeClass("none");
