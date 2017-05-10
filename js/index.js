@@ -680,6 +680,20 @@
                 main.pprize();
                 return;
             }
+            if(main.prizeType == 4 || main.prizeType == 5){//实物奖
+                if(!main.haveFill){
+                    main.top();
+                    main.hideBarrage();
+                    Barrage.updateBarrageContainerSize();
+                    Barrage.AddAllBarrageToContainer();
+                    main.alert({
+                        text:main.alertTxt.gofill,
+                        type:2,
+                        button:".alertbtn1"
+                    });
+                    return;
+                }
+            }
             if(main.FromTuiSong){
                 main.top();
                 main.pchaxun();
@@ -795,16 +809,6 @@
         $(".P_chaxunDoor").fo();
     };
     main.pchaxun = function(){
-        if(this.prizeType == 4 || this.prizeType == 5){//实物奖
-            if(!this.haveFill){
-                main.alert({
-                    text:main.alertTxt.gofill,
-                    type:2,
-                    button:".alertbtn1"
-                });
-                return;
-            }
-        }
         $(".chaxunBox"+this.prizeType).removeClass("none");
         switch(this.prizeType){
             case 4:

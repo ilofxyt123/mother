@@ -169,7 +169,7 @@ img{position: absolute;}
             .rule-txt{transition:transform 0.2s ease-out;}
         .P_rule .arraw{left:50%;margin-left:-27px;top:810px;}
 
-.P_alert{background-color:rgba(0,0,0,0.8)}
+.P_alert{background-color:rgba(0,0,0,0.8);z-index:16;}
     .ui-alertBox{position:absolute;top:275px;left:50%;margin-left:-230px;width:463px;height:293px;background-image: url("../images/tankuang.png");background-repeat: no-repeat;}
         .alertxx{right:24px;top:24px;}
         .alertbtn{bottom:43px;left:50%;margin-left:-102px;}
