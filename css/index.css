@@ -133,7 +133,8 @@ img{position: absolute;}
         p.add_info{height:30px;line-height:30px;text-align:center;margin-top:28px;color:#535353;}
         img.txt{position: static;display: inline-block;vertical-align:middle;}
         .pchaxun-type4-tip{position:static;margin-left:auto;margin-right:auto;margin-top:134px;}
-    .chaxun-btnGroup1,.chaxun-btnGroup2{top:608px;}
+    .chaxun-btnGroup1{top:704px;}
+    .chaxun-btnGroup2{top:608px;}
     .pcxxx{left:50%;margin-left:-20px;top:900px;}
 
  .P_chaxunDoor{background-color: rgba(0,0,0,0.8);z-index: 101;}
