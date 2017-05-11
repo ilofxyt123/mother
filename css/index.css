@@ -141,6 +141,7 @@ img{position: absolute;}
         .prizeType2{width:410px;height:260px;position:relative;left:100px;}
         .notquan{top:0;position: relative;margin:0 auto;z-index:2;}
         .prizeBox5 .notquan{top:53px;left:49px;}
+        .prizeBox5 .prizeType2{top:-30px;left:69px;}
         .ui-flower2{top:94px;z-index:1;left:50%;margin-left:-175px;}
         .prizeBox5 .ui-flower2{top:60px;margin-left:-132px;}
         .prize-txt{position:static;margin:55px auto;}
@@ -159,7 +160,7 @@ img{position: absolute;}
         .cxpic2{}
         .cxpic-flower{left:50%;top:80px;margin-left:-175px;z-index:-1;}
         .cxpic3{}
-        p.add_info{height:30px;line-height:30px;text-align:center;margin-top:28px;color:#535353;}
+        p.add_info{height:30px;line-height:30px;text-align:center;margin-top:28px;color:#535353;display:none;}
         img.txt{position: static;display: inline-block;vertical-align:middle;}
         .pchaxun-type4-tip{position:static;margin-left:auto;margin-right:auto;margin-top:134px;}
         .chaxunBox4 .pchaxun-type4-tip{margin-top: 80px;}

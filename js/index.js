@@ -984,7 +984,7 @@
             },
             touchend:function(e){
                 if((e.originalEvent.changedTouches[0].pageY-main.touch.StartY)<-30){//手指向上滑动
-                    if(main.SwiperIndex<6){
+                    if(main.SwiperIndex<7){
                         $(".p1-page"+main.SwiperIndex).fo();
                         main.SwiperIndex += 1;
                         $(".p1-page"+main.SwiperIndex).fi(function(){
