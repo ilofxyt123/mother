@@ -85,49 +85,49 @@
                 }(new Image(), ImageURL[i]));
             }
         },//图片列表,图片加载完后回调函数，是否需要显示百分比
-        this.lazyLoad = function(){
-            var a = $(".lazy");
-            var len = a.length;
-            var imgObj;
-            var Load = function(){
-                for(var i=0;i<len;i++){
-                    imgObj = a.eq(i);
-                    imgObj.attr("src",imgObj.attr("data-src"));
-                }
-            };
-            Load();
-        },//将页面中带有.lazy类的图片进行加载
-        this.browser = function(t){
-            var u = navigator.userAgent;
-            var u2 = navigator.userAgent.toLowerCase();
-            var p = navigator.platform;
-            var browserInfo = {
-                trident: u.indexOf('Trident') > -1, //IE内核
-                presto: u.indexOf('Presto') > -1, //opera内核
-                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
-                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
-                iPad: u.indexOf('iPad') > -1, //是否iPad
-                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
-                iosv: u.substr(u.indexOf('iPhone OS') + 9, 3),
-                weixin: u2.match(/MicroMessenger/i) == "micromessenger",
-                taobao: u.indexOf('AliApp(TB') > -1,
-                win: p.indexOf("Win") == 0,
-                mac: p.indexOf("Mac") == 0,
-                xll: (p == "X11") || (p.indexOf("Linux") == 0),
-                ipad: (navigator.userAgent.match(/iPad/i) != null) ? true : false
-            };
-            return browserInfo[t];
-        },//获取浏览器信息
-        this.g=function(id){
-            return document.getElementById(id);
-        },
-        this.E=function(selector,type,handle){
-            $(selector).on(type,handle);
-        }
+            this.lazyLoad = function(){
+                var a = $(".lazy");
+                var len = a.length;
+                var imgObj;
+                var Load = function(){
+                    for(var i=0;i<len;i++){
+                        imgObj = a.eq(i);
+                        imgObj.attr("src",imgObj.attr("data-src"));
+                    }
+                };
+                Load();
+            },//将页面中带有.lazy类的图片进行加载
+            this.browser = function(t){
+                var u = navigator.userAgent;
+                var u2 = navigator.userAgent.toLowerCase();
+                var p = navigator.platform;
+                var browserInfo = {
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                    iosv: u.substr(u.indexOf('iPhone OS') + 9, 3),
+                    weixin: u2.match(/MicroMessenger/i) == "micromessenger",
+                    taobao: u.indexOf('AliApp(TB') > -1,
+                    win: p.indexOf("Win") == 0,
+                    mac: p.indexOf("Mac") == 0,
+                    xll: (p == "X11") || (p.indexOf("Linux") == 0),
+                    ipad: (navigator.userAgent.match(/iPad/i) != null) ? true : false
+                };
+                return browserInfo[t];
+            },//获取浏览器信息
+            this.g=function(id){
+                return document.getElementById(id);
+            },
+            this.E=function(selector,type,handle){
+                $(selector).on(type,handle);
+            }
         this.limitNum=function(obj){//限制11位手机号
             var value = $(obj).val();
             var length = value.length;
@@ -161,38 +161,38 @@
                 });
             },false)
         },
-        this.MutedPlay=function(string){
-            var str = string.split(",");//id数组
-            var f = function(id){
-                var media = Utils.g(id);
-                media.volume = 0;
-                media.play();
-                // setTimeout(function(){
-                media.pause();
-                media.volume = 1;
-                media.currentTime = 0;
-                // },100)
-            };
-            if(!(str.length-1)){
-                f(str[0]);
-                return 0;
-            }
-            str.forEach(function(value,index){
-                f(value);
-            })
-        },
-        this.playMedia=function(id){
-            var _self = this;
-            var clock = setInterval(function(){
-                if(_self.mutedEnd){
-                    Utils.g(id).play()
-                    clearInterval(clock);
+            this.MutedPlay=function(string){
+                var str = string.split(",");//id数组
+                var f = function(id){
+                    var media = Utils.g(id);
+                    media.volume = 0;
+                    media.play();
+                    // setTimeout(function(){
+                    media.pause();
+                    media.volume = 1;
+                    media.currentTime = 0;
+                    // },100)
+                };
+                if(!(str.length-1)){
+                    f(str[0]);
+                    return 0;
                 }
-            },20)
-        }
+                str.forEach(function(value,index){
+                    f(value);
+                })
+            },
+            this.playMedia=function(id){
+                var _self = this;
+                var clock = setInterval(function(){
+                    if(_self.mutedEnd){
+                        Utils.g(id).play()
+                        clearInterval(clock);
+                    }
+                },20)
+            }
     };
     Media.WxMediaInit();
-    
+
     var Barrage = new function(){
         this.$container = $("#danmu");//容器
         this.template = $(".barrage");//模板
@@ -313,9 +313,9 @@
 
     };//往弹幕容器中增加一条弹幕
     Barrage.AddAllBarrageToContainer = function(){
-            for(var i=0;i<this.barrages.length;i++){
-                this.AddOneBarrageToContainer(this.barrages[i],i);//往容器中增加一条弹幕
-            }
+        for(var i=0;i<this.barrages.length;i++){
+            this.AddOneBarrageToContainer(this.barrages[i],i);//往容器中增加一条弹幕
+        }
     };
     Barrage.setBarrageLoop = function(){
         var callBack = function(){
@@ -604,10 +604,13 @@
 
         /*录音数据*/
         this.isRecording = false;//正在录音标志
+        this.isPlayVoice = false//正在播放语音
+
         this.analysisSuccess = false;//语音分析成功标志
         this.localID = undefined;//拿到的本地ID
         this.translateResult = "";//识别结果
         this.RecordSeverID="";//服务端ID
+
         /*录音数据*/
     };
     main.init = function(){
@@ -692,10 +695,7 @@
                 // $(".prec-btnGroup").removeClass("none");
                 // $(".icon1-end").removeClass("none");
                 // main.precord();
-                main.prize();//抽奖
-
-                // main.precordleave();
-                main.pprize();
+                lottery();
                 return;
             }
             if(main.prizeType == 4 || main.prizeType == 5){//实物奖
@@ -790,10 +790,11 @@
         // this.prizeType = 1;//88
         // this.prizeType = 2;//188
         // this.prizeType = 3;//520
-        // this.prizeType = 4;//矿泉水
-        this.prizeType = 5;//木头
+        //this.prizeType = 4;//矿泉水
+        // this.prizeType = 5;//木头
     };//抽奖函数
     main.pprize = function(){
+        this.prizeType = parseInt($("#lottery_result").val());
         $(".prizeBox"+this.prizeType).removeClass("none");
         switch(this.prizeType){
             case 4://实物
@@ -845,7 +846,7 @@
         $(".P_chaxun").fo();
     };
     main.pcode = function(){
-        $(".P_code").fi();
+        $(".P_code").fadeIn();
     };
     main.pshare = function(){
         $(".P_share").fi();
@@ -863,7 +864,11 @@
 
     /*调用微信语音api*/
     main.startRecord = function(){
-        wx.startRecord();
+        wx.startRecord({
+            success: function(){
+                localStorage.rainAllowRecord = 'true';
+            },
+        });
     };//开始录制
     main.stopRecord = function(){
         // 语音录制完毕,执行回调
@@ -871,6 +876,8 @@
             success: function (res) {
                 main.isRecording = false;
                 main.localId = res.localId;
+                $("#local_id").val(res.localId);
+                //alert(main.localId);
                 main.translateRecord(main.localId);
                 $(".bo1-bopng").removeClass("none");
                 $(".bo1-bogif").addClass("none");
@@ -890,24 +897,48 @@
             isShowProgressTips: 1, // 默认为1，显示进度提示
             success: function (res) {
                 main.analysisSuccess = true;
-                main.translateResult = res.translateResult; // 语音识别的结果
+                main.translateResult = res.translateResult.replace("。", ""); // 语音识别的结果
+                //alert(main.translateResult);
+                main.upLoadRecordToWxServer(localID);
 
                 $(".submit").removeClass("ui-chrome-btn-disable");
                 $(".analysisResult").html(main.translateResult);
+            },
+            fail: function (res) {
+                alert("语音识别失败，请重新录音");
+                console.log(res);
             }
         });
     };//语音识别
-    main.playRecord = function(localID){
+    main.playRecord = function(){
+        main.isPlayVoice = true;
+        var localID = $("#local_id").val();
         wx.playVoice({
             localId: localID // 需要播放的音频的本地ID，由stopRecord接口获得
+        });
+        $(".bo1-bopng").addClass("none");
+        $(".bo1-bogif").removeClass("none");
+        $(".icon1-end").addClass("none");
+        $(".icon1-pause").removeClass("none");
+
+        wx.onVoicePlayEnd({
+            success: function () {
+                main.isPlayVoice = false; // 返回音频的本地ID
+                $(".bo1-bopng").removeClass("none");
+                $(".bo1-bogif").addClass("none");
+                $(".icon1-end").removeClass("none");
+                $(".icon1-pause").addClass("none");
+            }
         });
     };//播放语音
     main.upLoadRecordToWxServer = function(localID){
         wx.uploadVoice({
             localId: localID, // 需要上传的音频的本地ID，由stopRecord接口获得
-            isShowProgressTips: 1, // 默认为1，显示进度提示
+            isShowProgressTips: 0, // 默认为1，显示进度提示
             success: function (res) {
                 main.RecordSeverID = res.serverId; // 返回音频的服务器端ID
+                //alert(res.serverId);
+                $("#media_id").val(res.serverId);
             }
         });
     };
@@ -921,7 +952,7 @@
         });
     };
     /*调用微信语音api*/
-    
+
     main.pend1 = function(){
         $(".P_end1").fi();
     };
@@ -951,10 +982,20 @@
     };
     main.initBarrage = function(){
         // Barrage.downloadArr = getDanMu();
+
+        Barrage.downloadArr = eval("("+$("#danmu_list").val()+")");
+        //alert(Barrage.downloadArr[0]);
         if(Barrage.downloadArr.length == 0){
             for(var i=0;i<Barrage.testArr.length;i++){
                 Barrage.CreateOneBarrage({
                     text:Barrage.testArr[i]
+                })
+            }
+        }
+        else{
+            for(var i=0;i<Barrage.downloadArr.length;i++){
+                Barrage.CreateOneBarrage({
+                    text:Barrage.downloadArr[i]
                 })
             }
         }
@@ -1048,12 +1089,12 @@
             }
         });
         $(".videoBox").on("touchend",function(){
-                if(main.V.isPlay){
-                    main.V.obj.pause();
-                }
-                else{
-                    main.V.obj.play();
-                }
+            if(main.V.isPlay){
+                main.V.obj.pause();
+            }
+            else{
+                main.V.obj.play();
+            }
 
         });
         $(".pv-btn").on("touchend",function(){
@@ -1098,17 +1139,22 @@
 
         /////////precord//////////
         $(".icon1-start,.btn-start").on("touchend",function(){
-            if(main.isRecording){return;};
+            if(main.isRecording){
+                clearInterval(main.clockSwitch);
+                main.stopRecord();
+                return;
+            };
             main.isRecording = true;
+
             document.getElementById("start_msc").play();
             Timer.init({
-               sec:5,
+                sec:5,
                 ms:0,
                 speed:17,
                 secBox:$(".time .s"),
                 msBox:$(".time .ms")
             });//视图——倒计时
-            var clock = setInterval(function(){
+            main.clockSwitch = setInterval(function(){
                 if(Timer.ms<=0){
                     Timer.ms = 1000;
                     Timer.sec--;
@@ -1119,36 +1165,37 @@
                 if(Timer.sec<0){
                     Timer.sec=0;
                     Timer.ms = "00";
-                    clearInterval(clock);
+                    main.stopRecord();
+                    clearInterval(main.clockSwitch);
                 }
 
                 Timer.secBox.html(Timer.sec);
                 Timer.msBox.html(Math.round(Timer.ms/10)>9?Math.round(Timer.ms/10):("0"+Math.round(Timer.ms/10)));
             },Timer.speed);
 
-           $(".bo1-bopng").addClass("none");
-           $(".bo1-bogif").removeClass("none");
+            $(".bo1-bopng").addClass("none");
+            $(".bo1-bogif").removeClass("none");
 
             main.startRecord()//开始录音
-            setTimeout(function(){
-
-                // main.stopRecord();
-
-                //前端假回调
-                /*语音录制成功回调*/
-                main.isRecording = false;
-                $(".bo1-bopng").removeClass("none");
-                $(".bo1-bogif").addClass("none");
-                $(".one").fo();
-                $(".icon1-end").fi();
-                $(".op-tip2").fi();
-
-                /*语音识别成功回调*/
-                $(".submit").removeClass("ui-chrome-btn-disable");
-                main.analysisSuccess = true;
-                main.translateResult = "语音识别的结果"
-                $(".analysisResult").html(main.translateResult);
-            },5000);
+            // setTimeout(function(){
+            //     if(main.isRecording){
+            //         main.stopRecord();
+            //     }
+            //
+            //     //前端假回调
+            //     /*语音录制成功回调*/
+            //     /*main.isRecording = false;
+            //     $(".bo1-bopng").removeClass("none");
+            //     $(".bo1-bogif").addClass("none");
+            //     $(".one").fo();
+            //     $(".two").fi();*/
+            //
+            //     /*语音识别成功回调*/
+            //     /*$(".submit").removeClass("ui-chrome-btn-disable");
+            //     main.analysisSuccess = true;
+            //     main.translateResult = "语音识别的结果"
+            //     $(".analysisResult").html(main.translateResult);*/
+            // },5000);
         });//点击开始录音
         $(".submit").on("touchend",function(){//提交按钮
             if(!main.analysisSuccess||(main.translateResult =="")){return;}//识别结果为空或者语音识别未成功，无法点击按钮
@@ -1158,7 +1205,9 @@
                 color:"#940101",
             });
             Barrage.AddOneBarrageToContainer(Barrage.barrages[Barrage.barrages.length-1],Barrage.barrages.length-1)
-            console.log("数据上保存一条弹幕内容，上传服务器");
+
+            //上传到服务器
+            add_voice();
 
             if(main.prizeType){
                 $(".prec-btnGroup .btn1").remove();
@@ -1174,10 +1223,11 @@
         });//提交识别结果，制作弹幕，上传识别文字结果+语音
         $(".btn-listen,.icon1-end").on("touchend",function(){
             if(!main.isRecording){
-                main.playRecord(main.localID);
+                main.playRecord();
             }
         });//试听
         $(".btn-restart").on("touchend",function(){
+            if(main.isPlayVoice){return;}
             main.translateResult = "";
             $(".analysisResult").html("");
             main.analysisSuccess = false;
@@ -1198,10 +1248,11 @@
                 });
                 return;
             }
-            main.prize();//抽奖
+            //main.prize();//抽奖
+            lottery();
 
-            main.precordleave();
-            main.pprize();
+            //main.precordleave();
+            //main.pprize();
         });
         $(".prec-btnGroup .btn2").on("touchend",function(){
             main.pshare()
@@ -1210,7 +1261,7 @@
 
         /////////prizeResult//////////
         $(".prz-btnGroup2 .btn2,.prz-btnGroup1 .btn2").on("touchend",function(){//分享
-           main.pshare();
+            main.pshare();
         });
         $(".prz-btnGroup2 .btn1").on("touchend",function(){
             main.pfill();
@@ -1253,6 +1304,8 @@
             //更新视图
             main.CommonSelect.str = main.CommonSelect.province + main.CommonSelect.city + main.CommonSelect.address;
             main.CommonSelect.contentBox.html(main.CommonSelect.str);
+
+            get_city();
         });
         main.CommonSelect.$cityObj.on("change",function(){//select选择城市
             main.CommonSelect.cityIndex = $(this)[0].selectedIndex;
@@ -1260,6 +1313,8 @@
             //更新视图
             main.CommonSelect.str = main.CommonSelect.province + main.CommonSelect.city + main.CommonSelect.address;
             main.CommonSelect.contentBox.html(main.CommonSelect.str);
+
+            get_shop();
         });
         main.CommonSelect.$addressObj.on("change",function(){//select选择门店
             main.CommonSelect.addressIndex = $(this)[0].selectedIndex;
@@ -1267,6 +1322,8 @@
             //更新视图
             main.CommonSelect.str = main.CommonSelect.province + main.CommonSelect.city + main.CommonSelect.address;
             main.CommonSelect.contentBox.html(main.CommonSelect.str);
+
+            $("#shop_id").val($(this).val());
         });
         /////////pchaxunDoor//////////
 
@@ -1291,21 +1348,12 @@
                 });
                 return;
             };
-            if(main.CommonSelect.addressIndex == 0 && main.CommonSelect.city == ""){
-                main.alert({
-                    text:main.alertTxt.door,
-                    type:1,
-                    button:".alertbtn2"
-                });
-                return;
-            }
 
             main.FillSelect.str = main.FillSelect.$provinceObj[0].options[main.FillSelect.$provinceObj[0].selectedIndex].text +
-                                  main.FillSelect.$cityObj[0].options[main.FillSelect.$cityObj[0].selectedIndex].text+
-                                  main.FillSelect.$addressObj[0].options[main.FillSelect.$addressObj[0].selectedIndex].text;
-            main.haveFill = true;
-            main.pfillleave();
-            main.pchaxun();
+                main.FillSelect.$cityObj[0].options[main.FillSelect.$cityObj[0].selectedIndex].text+
+                main.FillSelect.$addressObj[0].options[main.FillSelect.$addressObj[0].selectedIndex].text;
+
+            add_info();
         });
         $("#phone").on({
             input:function(){
@@ -1334,7 +1382,7 @@
 
         /////////pchaxun//////////
         $(".chaxun-btnGroup2 .btn2").on("touchend",function(){
-           main.pshare();
+            main.pshare();
         });
         $(".chaxun-btnGroup1 .btn1").on("touchend",function(){
             main.paddress();
@@ -1420,25 +1468,25 @@
     };
     main.back = function(){
         console.log(this.router)
-      switch(this.router){
-          case "pvideo":
-              main.pvideo();
-              break;
-          case "pend1":
-              main.pend1();
-              break;
-          case "p1":
-              main.p1();
-              break;
-          default:
-              main.pvideo();
-              break;
-      }
+        switch(this.router){
+            case "pvideo":
+                main.pvideo();
+                break;
+            case "pend1":
+                main.pend1();
+                break;
+            case "p1":
+                main.p1();
+                break;
+            default:
+                main.pvideo();
+                break;
+        }
     };
 
     a.main = main;
 
-/*-----------------------------事件绑定--------------------------------*/
+    /*-----------------------------事件绑定--------------------------------*/
 }(window));
 $(function(){
     main.init();
