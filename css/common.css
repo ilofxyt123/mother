@@ -131,6 +131,8 @@ a, button, input {
     margin: 0 auto;
     position: absolute;
     z-index: 10;
+    top:0;
+    left:0;
 }
 
 .none{
@@ -165,10 +167,12 @@ a, button, input {
     .barrage .close img{margin:12px auto;}
 
 html,body{
+    left:0;
+    top:0;
     width:640px;
     height:100%;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     margin:0 auto;
     background-color:white;
 }

@@ -490,7 +490,6 @@
             this.picUrl+"button-1.png",
             this.picUrl+"button-2.png",
             this.picUrl+"button-3.png",
-            this.picUrl+"close.png",
             this.picUrl+"esc.png",
             this.picUrl+"esc-1.png",
             this.picUrl+"f.gif",
@@ -893,7 +892,7 @@
                 main.translateResult = res.translateResult; // 语音识别的结果
 
                 $(".submit").removeClass("ui-chrome-btn-disable");
-                $(".analysisResult").html(main.translateResult);
+                $(".analysisResult").val(main.translateResult);
             }
         });
     };//语音识别
@@ -1146,8 +1145,8 @@
                 /*语音识别成功回调*/
                 $(".submit").removeClass("ui-chrome-btn-disable");
                 main.analysisSuccess = true;
-                main.translateResult = "语音识别的结果"
-                $(".analysisResult").html(main.translateResult);
+                main.translateResult = "语音识别的结果";
+                $(".analysisResult").val(main.translateResult);
             },5000);
         });//点击开始录音
         $(".submit").on("touchend",function(){//提交按钮
@@ -1179,7 +1178,7 @@
         });//试听
         $(".btn-restart").on("touchend",function(){
             main.translateResult = "";
-            $(".analysisResult").html("");
+            $(".analysisResult").val("");
             main.analysisSuccess = false;
             $(".submit").addClass("ui-chrome-btn-disable");
 
@@ -1205,6 +1204,12 @@
         });
         $(".prec-btnGroup .btn2").on("touchend",function(){
             main.pshare()
+        });
+        $(".analysisResult").on("input",function(){
+            main.translateResult = $(this)[0].value;
+            $("html,body").css({
+                top:"0px"
+            })
         });
         /////////precord//////////
 
