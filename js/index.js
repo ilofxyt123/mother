@@ -583,7 +583,7 @@
             this.picUrl+"p11-img-1.png",
             this.picUrl+"p11-text-1.png",
             this.picUrl+"phone.png",
-            this.picUrl+"poster.png",
+            this.picUrl+"poster.jpg",
             this.picUrl+"prztitle.png",
             this.picUrl+"tankuang.png",
             this.picUrl+"text.png",
@@ -1042,6 +1042,7 @@
             },
             ended:function(){
                 main.V.isPlay = false;
+                main.V.obj.currentTime = 2;
                 $(".play-btn").fi();
                 main.playbgm();
             }
